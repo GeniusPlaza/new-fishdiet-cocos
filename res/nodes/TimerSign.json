@@ -1,0 +1,274 @@
+{
+  "ID": "1d48d3a8-95e1-4784-b578-95bb48682688",
+  "Version": "3.10.0.0",
+  "Name": "TimerSign",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 436,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "sprites/ui/panel.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 0.0058,
+              "Y": -6.0004
+            },
+            "Scale": {
+              "ScaleX": 0.3823,
+              "ScaleY": 0.2227
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -508.9942,
+            "RightMargin": -509.0058,
+            "TopMargin": -315.4996,
+            "BottomMargin": -327.5004,
+            "Tag": 610,
+            "ActionTag": 1166853163,
+            "Size": {
+              "X": 1018.0,
+              "Y": 643.0
+            },
+            "Name": "panel_4",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "sprites/ui/rope.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.8617,
+              "ScaleY": 1.0
+            },
+            "Position": {
+              "X": 167.3361,
+              "Y": 192.6205
+            },
+            "Scale": {
+              "ScaleX": 0.2401,
+              "ScaleY": 0.3
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": 118.2218,
+            "RightMargin": -175.2218,
+            "TopMargin": -192.6205,
+            "BottomMargin": -293.3795,
+            "Tag": 608,
+            "ActionTag": 2071624939,
+            "Size": {
+              "X": 57.0,
+              "Y": 486.0
+            },
+            "Name": "rope_2_0",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "sprites/ui/rope.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": -168.8749,
+              "Y": 124.5518
+            },
+            "Scale": {
+              "ScaleX": 0.2401,
+              "ScaleY": 0.3
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -197.3749,
+            "RightMargin": 140.3749,
+            "TopMargin": -367.5518,
+            "BottomMargin": -118.4482,
+            "Tag": 609,
+            "ActionTag": -285264136,
+            "Size": {
+              "X": 57.0,
+              "Y": 486.0
+            },
+            "Name": "rope_2",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "sprites/ui/timer.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": -100.9741,
+              "Y": -6.0
+            },
+            "Scale": {
+              "ScaleX": 0.6524,
+              "ScaleY": 0.6524
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -181.9741,
+            "RightMargin": 19.9741,
+            "TopMargin": -79.0,
+            "BottomMargin": -91.0,
+            "Tag": 611,
+            "ActionTag": 22670300,
+            "Size": {
+              "X": 162.0,
+              "Y": 170.0
+            },
+            "Name": "timer_5",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FontSize": 70,
+            "LabelText": "60",
+            "FontResource": {
+              "Type": "Normal",
+              "Path": "../fonts/Vanilla copy.ttf",
+              "Plist": ""
+            },
+            "HorizontalAlignmentType": "HT_Center",
+            "VerticalAlignmentType": "VT_Center",
+            "OutlineSize": 5,
+            "OutlineColor": {},
+            "OutlineEnabled": true,
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 54.9576,
+              "Y": -6.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {
+              "R": 248,
+              "G": 140,
+              "B": 25
+            },
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": 1.4576,
+            "RightMargin": -108.4576,
+            "TopMargin": -36.0,
+            "BottomMargin": -48.0,
+            "Tag": 612,
+            "ActionTag": 125590242,
+            "Size": {
+              "X": 107.0,
+              "Y": 84.0
+            },
+            "Name": "timerText",
+            "ctype": "TextObjectData"
+          }
+        ],
+        "Size": {
+          "X": 0.0,
+          "Y": 0.0
+        },
+        "Name": "TimerSign",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "../../fonts/Vanilla copy.ttf",
+        "../sprites/ui/panel.png",
+        "../sprites/ui/rope.png",
+        "../sprites/ui/timer.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Node"
+}

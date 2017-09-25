@@ -1,0 +1,168 @@
+{
+  "ID": "7bba318b-eaf8-48a1-b579-7a52b8e37ed7",
+  "Version": "3.10.0.0",
+  "Name": "TitleSign",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 3,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "sprites/ui/sign.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": -6.0,
+              "Y": 4.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -592.0,
+            "RightMargin": -580.0,
+            "TopMargin": -169.0,
+            "BottomMargin": -161.0,
+            "Tag": 4,
+            "ActionTag": -1742776239,
+            "Size": {
+              "X": 1172.0,
+              "Y": 330.0
+            },
+            "Name": "sign_1",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "sprites/ui/rope.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": -501.3799,
+              "Y": 357.4827
+            },
+            "Scale": {
+              "ScaleX": 0.9,
+              "ScaleY": 1.2
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -529.8799,
+            "RightMargin": 472.8799,
+            "TopMargin": -600.4827,
+            "BottomMargin": 114.4827,
+            "Tag": 5,
+            "ActionTag": -1083221322,
+            "Size": {
+              "X": 57.0,
+              "Y": 486.0
+            },
+            "Name": "rope_2",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "sprites/ui/rope.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 455.1899,
+              "Y": 398.8889
+            },
+            "Scale": {
+              "ScaleX": 0.9,
+              "ScaleY": 1.2
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": 426.6899,
+            "RightMargin": -483.6899,
+            "TopMargin": -641.8889,
+            "BottomMargin": 155.8889,
+            "Tag": 6,
+            "ActionTag": -1458629843,
+            "Size": {
+              "X": 57.0,
+              "Y": 486.0
+            },
+            "Name": "rope_3",
+            "ctype": "SpriteObjectData"
+          }
+        ],
+        "Size": {
+          "X": 0.0,
+          "Y": 0.0
+        },
+        "Name": "TitleSign",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "../sprites/ui/rope.png",
+        "../sprites/ui/sign.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Node"
+}

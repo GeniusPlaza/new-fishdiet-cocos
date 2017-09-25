@@ -1,0 +1,73 @@
+{
+  "ID": "a0824fbd-978e-46aa-9c24-7de49831716c",
+  "Version": "3.10.0.0",
+  "Name": "PauseLayer",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 406,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "nodes/PausePopup.json",
+              "Plist": ""
+            },
+            "StretchWidthEnable": false,
+            "StretchHeightEnable": false,
+            "InnerActionSpeed": 1.0,
+            "AnchorPoint": {},
+            "Position": {
+              "X": 960.0,
+              "Y": 528.4694
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": true,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.4893
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": 960.0,
+            "RightMargin": 960.0,
+            "TopMargin": 551.5306,
+            "BottomMargin": 528.4694,
+            "Tag": 407,
+            "ActionTag": 625617722,
+            "Size": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Name": "pausePopup",
+            "ctype": "ProjectNodeObjectData"
+          }
+        ],
+        "Size": {
+          "X": 1920.0,
+          "Y": 1080.0
+        },
+        "Name": "Layer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "../nodes/PausePopup.json"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Layer"
+}

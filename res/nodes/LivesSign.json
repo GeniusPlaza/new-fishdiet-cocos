@@ -1,0 +1,414 @@
+{
+  "ID": "8c70c50d-6086-4cba-a268-1249d5f7ecd8",
+  "Version": "3.10.0.0",
+  "Name": "LivesSign",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 426,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "sprites/ui/panel.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 0.001,
+              "Y": -5.9988
+            },
+            "Scale": {
+              "ScaleX": 0.6582,
+              "ScaleY": 0.2227
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -508.999,
+            "RightMargin": -509.001,
+            "TopMargin": -315.5012,
+            "BottomMargin": -327.4988,
+            "Tag": 430,
+            "ActionTag": 1226844730,
+            "Size": {
+              "X": 1018.0,
+              "Y": 643.0
+            },
+            "Name": "panel_4",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "sprites/ui/rope.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": -290.4569,
+              "Y": 124.5516
+            },
+            "Scale": {
+              "ScaleX": 0.4,
+              "ScaleY": 0.3
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -318.9569,
+            "RightMargin": 261.9569,
+            "TopMargin": -367.5516,
+            "BottomMargin": -118.4484,
+            "Tag": 428,
+            "ActionTag": 1086386792,
+            "Size": {
+              "X": 57.0,
+              "Y": 486.0
+            },
+            "Name": "rope_2",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "sprites/ui/rope.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.8617,
+              "ScaleY": 1.0
+            },
+            "Position": {
+              "X": 287.5403,
+              "Y": 192.6203
+            },
+            "Scale": {
+              "ScaleX": 0.4,
+              "ScaleY": 0.3
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": 238.426,
+            "RightMargin": -295.426,
+            "TopMargin": -192.6203,
+            "BottomMargin": -293.3797,
+            "Tag": 429,
+            "ActionTag": -101868358,
+            "Size": {
+              "X": 57.0,
+              "Y": 486.0
+            },
+            "Name": "rope_2_0",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FlipX": true,
+            "FileData": {
+              "Type": "Normal",
+              "Path": "sprites/ui/blueFish.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": -265.0092,
+              "Y": -7.7468
+            },
+            "Scale": {
+              "ScaleX": 0.1349,
+              "ScaleY": 0.1349
+            },
+            "RotationSkewX": -6.0758,
+            "RotationSkewY": -6.038,
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -613.5092,
+            "RightMargin": -83.4908,
+            "TopMargin": -188.2532,
+            "BottomMargin": -203.7468,
+            "Tag": 431,
+            "ActionTag": 545071929,
+            "Size": {
+              "X": 697.0,
+              "Y": 392.0
+            },
+            "Name": "blueFish_5",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "IsCustomSize": true,
+            "FontSize": 22,
+            "LabelText": "",
+            "FontResource": {
+              "Type": "Normal",
+              "Path": "../fonts/Vanilla copy.ttf",
+              "Plist": ""
+            },
+            "HorizontalAlignmentType": "HT_Center",
+            "VerticalAlignmentType": "VT_Center",
+            "OutlineSize": 4,
+            "OutlineColor": {},
+            "OutlineEnabled": true,
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 37.9647,
+              "Y": 12.984
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {
+              "R": 248,
+              "G": 140,
+              "B": 25
+            },
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -237.0353,
+            "RightMargin": -312.9647,
+            "TopMargin": -72.984,
+            "BottomMargin": -47.016,
+            "Tag": 432,
+            "ActionTag": -1390924787,
+            "Size": {
+              "X": 550.0,
+              "Y": 120.0
+            },
+            "Name": "questionLabel",
+            "ctype": "TextObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "sprites/ui/fishIcon.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": -83.0944,
+              "Y": -48.7933
+            },
+            "Scale": {
+              "ScaleX": 0.1898,
+              "ScaleY": 0.1265
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -255.5944,
+            "RightMargin": -89.4056,
+            "TopMargin": -67.7067,
+            "BottomMargin": -165.2933,
+            "Tag": 433,
+            "ActionTag": -1546821194,
+            "Size": {
+              "X": 345.0,
+              "Y": 233.0
+            },
+            "Name": "live1",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "sprites/ui/fishIcon.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 10.0541,
+              "Y": -50.4697
+            },
+            "Scale": {
+              "ScaleX": 0.1898,
+              "ScaleY": 0.1265
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -162.4459,
+            "RightMargin": -182.5541,
+            "TopMargin": -66.0303,
+            "BottomMargin": -166.9697,
+            "Tag": 434,
+            "ActionTag": -781197680,
+            "Size": {
+              "X": 345.0,
+              "Y": 233.0
+            },
+            "Name": "live2",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "sprites/ui/fishIcon.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 104.7599,
+              "Y": -50.5966
+            },
+            "Scale": {
+              "ScaleX": 0.1898,
+              "ScaleY": 0.1265
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -67.7401,
+            "RightMargin": -277.2599,
+            "TopMargin": -65.9034,
+            "BottomMargin": -167.0966,
+            "Tag": 435,
+            "ActionTag": -358845569,
+            "Size": {
+              "X": 345.0,
+              "Y": 233.0
+            },
+            "Name": "live3",
+            "ctype": "SpriteObjectData"
+          }
+        ],
+        "Size": {
+          "X": 0.0,
+          "Y": 0.0
+        },
+        "Name": "LivesSign",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "../../fonts/Vanilla copy.ttf",
+        "../sprites/ui/blueFish.png",
+        "../sprites/ui/fishIcon.png",
+        "../sprites/ui/panel.png",
+        "../sprites/ui/rope.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Node"
+}

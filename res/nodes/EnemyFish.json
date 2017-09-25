@@ -1,0 +1,183 @@
+{
+  "ID": "7b1b91c8-1484-4860-8cd2-af6dc143d18c",
+  "Version": "3.10.0.0",
+  "Name": "EnemyFish",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 1099,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "sprites/bubbles/bubble.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 237.665,
+              "Y": 0.0006
+            },
+            "Scale": {
+              "ScaleX": 0.25,
+              "ScaleY": 0.25
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -245.335,
+            "RightMargin": -720.665,
+            "TopMargin": -426.5006,
+            "BottomMargin": -426.4994,
+            "Tag": 1101,
+            "ActionTag": -525417275,
+            "Size": {
+              "X": 966.0,
+              "Y": 853.0
+            },
+            "Name": "bubble_2",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Default",
+              "Path": "Default/Sprite.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -200.0,
+            "RightMargin": -200.0,
+            "TopMargin": -126.0,
+            "BottomMargin": -126.0,
+            "Tag": 1100,
+            "ActionTag": 733128402,
+            "Size": {
+              "X": 46.0,
+              "Y": 46.0
+            },
+            "Name": "fishImage",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "IsCustomSize": true,
+            "FontSize": 40,
+            "LabelText": "",
+            "FontResource": {
+              "Type": "Normal",
+              "Path": "../fonts/Vanilla copy.ttf",
+              "Plist": ""
+            },
+            "VerticalAlignmentType": "VT_Center",
+            "OutlineSize": 3,
+            "OutlineColor": {},
+            "OutlineEnabled": true,
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 230.3105,
+              "Y": 0.0002
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {
+              "R": 248,
+              "G": 140,
+              "B": 25
+            },
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": 140.3105,
+            "RightMargin": -320.3105,
+            "TopMargin": -70.0002,
+            "BottomMargin": -69.9998,
+            "Tag": 1102,
+            "ActionTag": -1902478228,
+            "Size": {
+              "X": 180.0,
+              "Y": 140.0
+            },
+            "Name": "bubbleText",
+            "ctype": "TextObjectData"
+          }
+        ],
+        "Size": {
+          "X": 0.0,
+          "Y": 0.0
+        },
+        "Name": "EnemyFish",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "../Default/Sprite.png",
+        "../../fonts/Vanilla copy.ttf",
+        "../sprites/bubbles/bubble.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Node"
+}

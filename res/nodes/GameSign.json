@@ -1,0 +1,540 @@
+{
+  "ID": "92cf429b-7065-47a4-98d6-447442b55c3c",
+  "Version": "3.10.0.0",
+  "Name": "GameSign",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 280,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "sprites/ui/panel.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 0.0017,
+              "Y": 138.9439
+            },
+            "Scale": {
+              "ScaleX": 0.8,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -508.9983,
+            "RightMargin": -509.0017,
+            "TopMargin": -460.4439,
+            "BottomMargin": -182.5561,
+            "Tag": 281,
+            "ActionTag": 849976748,
+            "Size": {
+              "X": 1018.0,
+              "Y": 643.0
+            },
+            "Name": "gameNamePanel",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "sprites/ui/woodsign.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 9.8417,
+              "Y": -349.2265
+            },
+            "Scale": {
+              "ScaleX": 0.6784,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -576.1583,
+            "RightMargin": -595.8417,
+            "TopMargin": 184.2265,
+            "BottomMargin": -514.2266,
+            "Tag": 282,
+            "ActionTag": 1780416766,
+            "Size": {
+              "X": 1172.0,
+              "Y": 330.0
+            },
+            "Name": "questionsPanel",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "sprites/ui/gameImage.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": -2.4238,
+              "Y": 249.8608
+            },
+            "Scale": {
+              "ScaleX": 9.3091,
+              "ScaleY": 6.7524
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -25.4238,
+            "RightMargin": -20.5762,
+            "TopMargin": -272.8608,
+            "BottomMargin": 226.8608,
+            "Tag": 327,
+            "ActionTag": -1512651759,
+            "Size": {
+              "X": 46.0,
+              "Y": 48.0
+            },
+            "Name": "gameIcon",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "sprites/ui/rope.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": -351.9038,
+              "Y": 604.1781
+            },
+            "Scale": {
+              "ScaleX": 0.6,
+              "ScaleY": 0.8
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -380.4038,
+            "RightMargin": 323.4038,
+            "TopMargin": -847.1781,
+            "BottomMargin": 361.1781,
+            "Tag": 323,
+            "ActionTag": -1473110785,
+            "Size": {
+              "X": 57.0,
+              "Y": 486.0
+            },
+            "Name": "rope_3",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "sprites/ui/rope.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 340.7224,
+              "Y": 583.178
+            },
+            "Scale": {
+              "ScaleX": 0.6,
+              "ScaleY": 0.8
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": 312.2224,
+            "RightMargin": -369.2224,
+            "TopMargin": -826.178,
+            "BottomMargin": 340.178,
+            "Tag": 324,
+            "ActionTag": 1176562850,
+            "Size": {
+              "X": 57.0,
+              "Y": 486.0
+            },
+            "Name": "rope_3_0",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "sprites/ui/ropeHalf.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": -336.1046,
+              "Y": -204.8121
+            },
+            "Scale": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.65
+            },
+            "RotationSkewX": -6.1884,
+            "RotationSkewY": -6.1877,
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -364.1046,
+            "RightMargin": 308.1046,
+            "TopMargin": 74.3121,
+            "BottomMargin": -335.3121,
+            "Tag": 325,
+            "ActionTag": -1040281310,
+            "Size": {
+              "X": 56.0,
+              "Y": 261.0
+            },
+            "Name": "ropeHalf_5",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "sprites/ui/ropeHalf.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 332.457,
+              "Y": -173.7071
+            },
+            "Scale": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.6
+            },
+            "RotationSkewX": 6.5888,
+            "RotationSkewY": 6.5854,
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": 304.457,
+            "RightMargin": -360.457,
+            "TopMargin": 43.2071,
+            "BottomMargin": -304.2071,
+            "Tag": 326,
+            "ActionTag": 501157461,
+            "Size": {
+              "X": 56.0,
+              "Y": 261.0
+            },
+            "Name": "ropeHalf_5_0",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "IsCustomSize": true,
+            "FontSize": 40,
+            "LabelText": "",
+            "FontResource": {
+              "Type": "Normal",
+              "Path": "../fonts/Vanilla copy.ttf",
+              "Plist": ""
+            },
+            "HorizontalAlignmentType": "HT_Center",
+            "VerticalAlignmentType": "VT_Center",
+            "OutlineSize": 4,
+            "OutlineColor": {},
+            "OutlineEnabled": true,
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 2.4376,
+              "Y": -14.2505
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {
+              "R": 248,
+              "G": 140,
+              "B": 25
+            },
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -347.5624,
+            "RightMargin": -352.4376,
+            "TopMargin": -98.2495,
+            "BottomMargin": -126.7505,
+            "Tag": 328,
+            "ActionTag": -1257294792,
+            "Size": {
+              "X": 700.0,
+              "Y": 225.0
+            },
+            "Name": "gameTitleText",
+            "ctype": "TextObjectData"
+          },
+          {
+            "IsCustomSize": true,
+            "FontSize": 70,
+            "LabelText": "Questions",
+            "FontResource": {
+              "Type": "Normal",
+              "Path": "../fonts/Vanilla copy.ttf",
+              "Plist": ""
+            },
+            "HorizontalAlignmentType": "HT_Center",
+            "VerticalAlignmentType": "VT_Center",
+            "OutlineSize": 4,
+            "OutlineColor": {},
+            "OutlineEnabled": true,
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 0.0,
+              "Y": -291.1117
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "RotationSkewX": -3.2554,
+            "RotationSkewY": -3.254,
+            "CColor": {
+              "R": 248,
+              "G": 140,
+              "B": 25
+            },
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -250.0,
+            "RightMargin": -250.0,
+            "TopMargin": 241.1117,
+            "BottomMargin": -341.1117,
+            "Tag": 333,
+            "ActionTag": 1702190115,
+            "Size": {
+              "X": 500.0,
+              "Y": 100.0
+            },
+            "Name": "questionsSignText",
+            "ctype": "TextObjectData"
+          },
+          {
+            "IsCustomSize": true,
+            "FontSize": 90,
+            "LabelText": "",
+            "FontResource": {
+              "Type": "Normal",
+              "Path": "../fonts/Vanilla copy.ttf",
+              "Plist": ""
+            },
+            "HorizontalAlignmentType": "HT_Center",
+            "VerticalAlignmentType": "VT_Center",
+            "OutlineSize": 4,
+            "OutlineColor": {},
+            "OutlineEnabled": true,
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 12.4523,
+              "Y": -406.7658
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "RotationSkewX": -3.3017,
+            "RotationSkewY": -3.2996,
+            "CColor": {
+              "R": 248,
+              "G": 140,
+              "B": 25
+            },
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -237.5477,
+            "RightMargin": -262.4523,
+            "TopMargin": 341.7658,
+            "BottomMargin": -471.7658,
+            "Tag": 334,
+            "ActionTag": -781802116,
+            "Size": {
+              "X": 500.0,
+              "Y": 130.0
+            },
+            "Name": "questionsNumber",
+            "ctype": "TextObjectData"
+          }
+        ],
+        "Size": {
+          "X": 0.0,
+          "Y": 0.0
+        },
+        "Name": "GameSign",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "../../fonts/Vanilla copy.ttf",
+        "../sprites/ui/gameImage.png",
+        "../sprites/ui/panel.png",
+        "../sprites/ui/rope.png",
+        "../sprites/ui/ropeHalf.png",
+        "../sprites/ui/woodsign.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Node"
+}

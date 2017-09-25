@@ -1,0 +1,686 @@
+{
+  "ID": "ae9f69fd-248c-4f48-b3e5-7c9b846db7ca",
+  "Version": "3.10.0.0",
+  "Name": "Leaderboard",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 914,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "sprites/ui/resultsPanel.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -960.0,
+            "RightMargin": -960.0,
+            "TopMargin": -540.0,
+            "BottomMargin": -540.0,
+            "Tag": 915,
+            "ActionTag": -1872677115,
+            "Size": {
+              "X": 1920.0,
+              "Y": 1080.0
+            },
+            "Name": "resultsPanel_1",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FontSize": 80,
+            "LabelText": "Completed!",
+            "FontResource": {
+              "Type": "Normal",
+              "Path": "../fonts/Vanilla copy.ttf",
+              "Plist": ""
+            },
+            "OutlineSize": 5,
+            "OutlineColor": {},
+            "OutlineEnabled": true,
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": -394.459,
+              "Y": 441.0203
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "RotationSkewX": 3.6534,
+            "RotationSkewY": 3.6498,
+            "CColor": {
+              "R": 248,
+              "G": 140,
+              "B": 25
+            },
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -672.459,
+            "RightMargin": 116.459,
+            "TopMargin": -488.0203,
+            "BottomMargin": 394.0203,
+            "Tag": 916,
+            "ActionTag": -1472205393,
+            "Size": {
+              "X": 556.0,
+              "Y": 94.0
+            },
+            "Name": "Text_1",
+            "ctype": "TextObjectData"
+          },
+          {
+            "FontSize": 80,
+            "LabelText": "Score",
+            "FontResource": {
+              "Type": "Normal",
+              "Path": "../fonts/Vanilla copy.ttf",
+              "Plist": ""
+            },
+            "OutlineSize": 5,
+            "OutlineColor": {},
+            "OutlineEnabled": true,
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": -401.6061,
+              "Y": 281.5642
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "RotationSkewX": 6.216,
+            "RotationSkewY": 6.2124,
+            "CColor": {
+              "R": 248,
+              "G": 140,
+              "B": 25
+            },
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -546.6061,
+            "RightMargin": 256.6061,
+            "TopMargin": -328.5642,
+            "BottomMargin": 234.5642,
+            "Tag": 917,
+            "ActionTag": 17205655,
+            "Size": {
+              "X": 290.0,
+              "Y": 94.0
+            },
+            "Name": "Text_1_0",
+            "ctype": "TextObjectData"
+          },
+          {
+            "FontSize": 100,
+            "LabelText": "0",
+            "FontResource": {
+              "Type": "Normal",
+              "Path": "../fonts/Vanilla copy.ttf",
+              "Plist": ""
+            },
+            "HorizontalAlignmentType": "HT_Center",
+            "VerticalAlignmentType": "VT_Center",
+            "OutlineSize": 5,
+            "OutlineColor": {},
+            "OutlineEnabled": true,
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "AnchorPoint": {
+              "ScaleX": 0.4523,
+              "ScaleY": 0.4781
+            },
+            "Position": {
+              "X": -414.0651,
+              "Y": -12.2505
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "RotationSkewY": -0.005,
+            "CColor": {
+              "R": 248,
+              "G": 140,
+              "B": 25
+            },
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -446.6328,
+            "RightMargin": 374.6328,
+            "TopMargin": -47.7639,
+            "BottomMargin": -67.2361,
+            "Tag": 918,
+            "ActionTag": 895733018,
+            "Size": {
+              "X": 72.0,
+              "Y": 115.0
+            },
+            "Name": "score",
+            "ctype": "TextObjectData"
+          },
+          {
+            "FontSize": 60,
+            "LabelText": "Leaderboard",
+            "FontResource": {
+              "Type": "Normal",
+              "Path": "../fonts/Vanilla copy.ttf",
+              "Plist": ""
+            },
+            "OutlineSize": 5,
+            "OutlineColor": {},
+            "OutlineEnabled": true,
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 201.3174,
+              "Y": 396.519
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "RotationSkewY": -0.0052,
+            "CColor": {
+              "R": 248,
+              "G": 140,
+              "B": 25
+            },
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -36.6826,
+            "RightMargin": -439.3174,
+            "TopMargin": -433.019,
+            "BottomMargin": 360.019,
+            "Tag": 920,
+            "ActionTag": -309501875,
+            "Size": {
+              "X": 476.0,
+              "Y": 73.0
+            },
+            "Name": "Text_1_0_0",
+            "ctype": "TextObjectData"
+          },
+          {
+            "DirectionType": "Vertical",
+            "IsBounceEnabled": true,
+            "ScrollDirectionType": 0,
+            "ClipAble": true,
+            "BackColorAlpha": 102,
+            "SingleColor": {
+              "R": 150,
+              "G": 150
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 150
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
+            "TouchEnable": true,
+            "AnchorPoint": {},
+            "Position": {
+              "X": -75.928,
+              "Y": -171.5016
+            },
+            "Scale": {
+              "ScaleX": 2.7028,
+              "ScaleY": 2.4946
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -75.928,
+            "RightMargin": -124.072,
+            "TopMargin": -28.4984,
+            "BottomMargin": -171.5016,
+            "Tag": 922,
+            "ActionTag": 981039265,
+            "Size": {
+              "X": 200.0,
+              "Y": 200.0
+            },
+            "Name": "scoresList",
+            "ctype": "ListViewObjectData"
+          },
+          {
+            "FontSize": 14,
+            "ButtonText": "",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "NormalFileData": {
+              "Type": "Normal",
+              "Path": "sprites/ui/end_btn_bg.png",
+              "Plist": ""
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 11,
+            "Scale9Width": 92,
+            "Scale9Height": 110,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 1.9299,
+              "Y": -320.0
+            },
+            "Scale": {
+              "ScaleX": 1.25,
+              "ScaleY": 1.25
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -59.0701,
+            "RightMargin": -62.9299,
+            "TopMargin": 254.0,
+            "BottomMargin": -386.0,
+            "Tag": 939,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "sprites/ui/comment-512.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 61.2581,
+                  "Y": 71.0527
+                },
+                "Scale": {
+                  "ScaleX": 0.15,
+                  "ScaleY": 0.15
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5021,
+                  "Y": 0.5383
+                },
+                "PreSize": {
+                  "X": 4.1967,
+                  "Y": 3.8788
+                },
+                "LeftMargin": -194.7419,
+                "RightMargin": -195.2581,
+                "TopMargin": -195.0527,
+                "BottomMargin": -184.9473,
+                "Tag": 940,
+                "ActionTag": -466690368,
+                "Size": {
+                  "X": 512.0,
+                  "Y": 512.0
+                },
+                "Name": "Sprite_2",
+                "ctype": "SpriteObjectData"
+              }
+            ],
+            "ActionTag": -2071530182,
+            "Size": {
+              "X": 122.0,
+              "Y": 132.0
+            },
+            "Name": "reflectionBtn",
+            "ctype": "ButtonObjectData"
+          },
+          {
+            "FontSize": 14,
+            "ButtonText": "",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "NormalFileData": {
+              "Type": "Normal",
+              "Path": "sprites/ui/highFiveBtn.png",
+              "Plist": ""
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 11,
+            "Scale9Width": 92,
+            "Scale9Height": 110,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 202.84,
+              "Y": -320.0
+            },
+            "Scale": {
+              "ScaleX": 1.25,
+              "ScaleY": 1.25
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": 141.84,
+            "RightMargin": -263.84,
+            "TopMargin": 254.0,
+            "BottomMargin": -386.0,
+            "Tag": 943,
+            "ActionTag": -139144040,
+            "Size": {
+              "X": 122.0,
+              "Y": 132.0
+            },
+            "Name": "highFiveBtn",
+            "ctype": "ButtonObjectData"
+          },
+          {
+            "FontSize": 14,
+            "ButtonText": "",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "PressedFileData": {
+              "Type": "Normal",
+              "Path": "sprites/ui/replay_down.png",
+              "Plist": ""
+            },
+            "NormalFileData": {
+              "Type": "Normal",
+              "Path": "sprites/ui/replay_up.png",
+              "Plist": ""
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 11,
+            "Scale9Width": 162,
+            "Scale9Height": 179,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 700.7263,
+              "Y": -455.7167
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": 604.7263,
+            "RightMargin": -796.7263,
+            "TopMargin": 355.2167,
+            "BottomMargin": -556.2167,
+            "Tag": 944,
+            "ActionTag": 1880631408,
+            "Size": {
+              "X": 192.0,
+              "Y": 201.0
+            },
+            "Name": "replayBtn",
+            "ctype": "ButtonObjectData"
+          },
+          {
+            "FontSize": 14,
+            "ButtonText": "",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "NormalFileData": {
+              "Type": "Normal",
+              "Path": "sprites/ui/highFiveBtnPress.png",
+              "Plist": ""
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 11,
+            "Scale9Width": 92,
+            "Scale9Height": 110,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 202.84,
+              "Y": -320.0
+            },
+            "Scale": {
+              "ScaleX": 1.25,
+              "ScaleY": 1.25
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": 141.84,
+            "RightMargin": -263.84,
+            "TopMargin": 254.0,
+            "BottomMargin": -386.0,
+            "Tag": 945,
+            "ActionTag": -389645248,
+            "Size": {
+              "X": 122.0,
+              "Y": 132.0
+            },
+            "VisibleForFrame": false,
+            "Name": "highFiveBtnDown",
+            "ctype": "ButtonObjectData"
+          }
+        ],
+        "Size": {
+          "X": 0.0,
+          "Y": 0.0
+        },
+        "Name": "Leaderboard",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "../../fonts/Vanilla copy.ttf",
+        "../sprites/ui/comment-512.png",
+        "../sprites/ui/end_btn_bg.png",
+        "../sprites/ui/highFiveBtn.png",
+        "../sprites/ui/highFiveBtnPress.png",
+        "../sprites/ui/replay_down.png",
+        "../sprites/ui/replay_up.png",
+        "../sprites/ui/resultsPanel.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Node"
+}
