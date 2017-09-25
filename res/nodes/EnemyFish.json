@@ -17,7 +17,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "sprites/bubbles/bubble.png",
+              "Path": "../sprites/bubbles/bubble.png",
               "Plist": ""
             },
             "BlendFunc": {
@@ -173,7 +173,7 @@
       },
       "UsedResources": [
         "../Default/Sprite.png",
-        "../../fonts/Vanilla copy.ttf",
+        "../fonts/Vanilla copy.ttf",
         "../sprites/bubbles/bubble.png"
       ],
       "ctype": "GameFileData"

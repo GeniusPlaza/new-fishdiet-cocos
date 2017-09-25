@@ -9,10 +9,20 @@
     "renderMode" : 0,
     "engineDir":"cocos2d",
 
-    "modules" : ["cocos2d", "extensions"],
+    "modules" : ["cocos2d", "cocostudio", "extensions"],
 
     "jsList" : [
         "src/resource.js",
-        "src/app.js"
+        
+        "src/ui/layers/pauseLayer.js",
+        "src/ui/layers/hudLayer.js",
+        "src/ui/layers/titleLayer.js",
+        "src/ui/layers/startLayer.js",
+        "src/ui/layers/instructionsLayer.js",
+        "src/ui/layers/reflectionLayer.js",
+        "src/ui/layers/leaderboardLayer.js",
+        "src/ui/layers/backgroundLayer.js",
+        
+        "src/ui/gameScene.js"
     ]
 }

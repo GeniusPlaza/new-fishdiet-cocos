@@ -1,6 +1,6 @@
 {
   "ID": "7bba318b-eaf8-48a1-b579-7a52b8e37ed7",
-  "Version": "3.10.0.0",
+  "Version": "3.15.0.0",
   "Name": "TitleSign",
   "Content": {
     "Content": {
@@ -17,7 +17,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "sprites/ui/sign.png",
+              "Path": "../sprites/ui/sign.png",
               "Plist": ""
             },
             "BlendFunc": {
@@ -62,7 +62,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "sprites/ui/rope.png",
+              "Path": "../sprites/ui/rope.png",
               "Plist": ""
             },
             "BlendFunc": {
@@ -107,7 +107,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "sprites/ui/rope.png",
+              "Path": "../sprites/ui/rope.png",
               "Plist": ""
             },
             "BlendFunc": {

@@ -17,7 +17,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "sprites/gameplayBG.png",
+              "Path": "../sprites/gameplayBG.png",
               "Plist": ""
             },
             "BlendFunc": {
@@ -58,7 +58,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "sprites/bubbles/bubble/bubble1.png",
+              "Path": "../sprites/bubbles/bubble/bubbleAnim10001.png",
               "Plist": ""
             },
             "BlendFunc": {
@@ -71,7 +71,7 @@
             },
             "Position": {
               "X": 159.0872,
-              "Y": 195.9996
+              "Y": 200
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -103,7 +103,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "sprites/bubbles/bubble2/bubble2.png",
+              "Path": "../sprites/bubbles/bubble2/bubbleAnim20001.png",
               "Plist": ""
             },
             "BlendFunc": {
@@ -116,7 +116,7 @@
             },
             "Position": {
               "X": 1770.0425,
-              "Y": 193.5497
+              "Y": 200
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -154,8 +154,8 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
-        "../sprites/bubbles/bubble/bubble1.png",
-        "../sprites/bubbles/bubble2/bubble2.png",
+        "../sprites/bubbles/bubble/bubbleAnim10001.png",
+        "../sprites/bubbles/bubble2/bubbleAnim20001.png",
         "../sprites/gameplayBG.png"
       ],
       "ctype": "GameFileData"

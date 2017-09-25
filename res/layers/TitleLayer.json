@@ -17,48 +17,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "nodes/TitleSign.json",
-              "Plist": ""
-            },
-            "StretchWidthEnable": false,
-            "StretchHeightEnable": false,
-            "InnerActionSpeed": 1.0,
-            "AnchorPoint": {},
-            "Position": {
-              "X": 974.7024,
-              "Y": 632.2087
-            },
-            "Scale": {
-              "ScaleX": 1.0,
-              "ScaleY": 1.0
-            },
-            "CColor": {},
-            "IconVisible": true,
-            "PrePosition": {
-              "X": 0.5077,
-              "Y": 0.5854
-            },
-            "PreSize": {
-              "X": 0.0,
-              "Y": 0.0
-            },
-            "LeftMargin": 974.7024,
-            "RightMargin": 945.2976,
-            "TopMargin": 447.7913,
-            "BottomMargin": 632.2087,
-            "Tag": 1177,
-            "ActionTag": -651285160,
-            "Size": {
-              "X": 0.0,
-              "Y": 0.0
-            },
-            "Name": "TitleSign",
-            "ctype": "ProjectNodeObjectData"
-          },
-          {
-            "FileData": {
-              "Type": "Normal",
-              "Path": "sprites/ui/blueFish.png",
+              "Path": "../sprites/ui/blueFish.png",
               "Plist": ""
             },
             "BlendFunc": {
@@ -103,7 +62,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "sprites/fishes/blowfish/blowfish0001.png",
+              "Path": "../sprites/fishes/blowfish/blowfish0001.png",
               "Plist": ""
             },
             "BlendFunc": {
@@ -150,7 +109,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "sprites/fishes/seahorse/seahorse0001.png",
+              "Path": "../sprites/fishes/seahorse/seahorse0001.png",
               "Plist": ""
             },
             "BlendFunc": {
@@ -196,7 +155,7 @@
             "FlipX": true,
             "FileData": {
               "Type": "Normal",
-              "Path": "sprites/fishes/pinkfish/pinkfish0001.png",
+              "Path": "../sprites/fishes/pinkfish/pinkfish0001.png",
               "Plist": ""
             },
             "BlendFunc": {
@@ -253,7 +212,7 @@
             },
             "NormalFileData": {
               "Type": "Normal",
-              "Path": "sprites/ui/btn_up.png",
+              "Path": "../sprites/ui/btn_up.png",
               "Plist": ""
             },
             "Scale9Enable": true,
@@ -299,6 +258,7 @@
             "RightMargin": 733.257,
             "TopMargin": 678.3042,
             "BottomMargin": 71.6958,
+            "CallBackType": "Touch",
             "Tag": 1186,
             "Children": [
               {
@@ -379,12 +339,13 @@
       },
       "UsedResources": [
         "../fonts/Vanilla copy.ttf",
-        "../nodes/TitleSign.json",
         "../sprites/fishes/blowfish/blowfish0001.png",
         "../sprites/fishes/pinkfish/pinkfish0001.png",
         "../sprites/fishes/seahorse/seahorse0001.png",
         "../sprites/ui/blueFish.png",
-        "../sprites/ui/btn_up.png"
+        "../sprites/ui/btn_up.png",
+        "../sprites/ui/rope.png",
+        "../sprites/ui/sign.png"
       ],
       "ctype": "GameFileData"
     }
