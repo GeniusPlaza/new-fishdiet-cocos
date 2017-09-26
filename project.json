@@ -14,8 +14,8 @@
     "jsList" : [
         "src/resource.js",
         
+        "src/ui/layers/blackLayer.js",
         "src/ui/layers/pauseLayer.js",
-        "src/ui/layers/hudLayer.js",
         "src/ui/layers/titleLayer.js",
         "src/ui/layers/startLayer.js",
         "src/ui/layers/instructionsLayer.js",

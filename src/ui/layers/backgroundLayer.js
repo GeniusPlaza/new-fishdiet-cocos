@@ -9,7 +9,7 @@ var BackgroundLayer = cc.Layer.extend({
         // 2. import cocos studio files
         var size = cc.winSize;
         
-        var rootNode = ccs.load(resJson.backgroundLayer_json);        
+        var rootNode = ccs.load(resJson.backgroundLayer);        
         this.addChild(rootNode.node);
         
         // animate bubbles 1
@@ -21,8 +21,8 @@ var BackgroundLayer = cc.Layer.extend({
         return true;
     },
     animateBubbles1: function (bubbles1) {        
-        cc.spriteFrameCache.addSpriteFrames(res.bubbles1_plist);
-        var bubbles1Texture = cc.textureCache.addImage(res.bubbles1_png),
+        cc.spriteFrameCache.addSpriteFrames(resSpriteSheet.bubbles1_plist);
+        var bubbles1Texture = cc.textureCache.addImage(resSpriteSheet.bubbles1_png),
             bubbles1Images  = cc.SpriteBatchNode.create(bubbles1Texture);
         this.addChild(bubbles1Images);
         
@@ -42,8 +42,8 @@ var BackgroundLayer = cc.Layer.extend({
         ); 
     },
     animateBubbles2: function (bubbles2) {
-        cc.spriteFrameCache.addSpriteFrames(res.bubbles2_plist);
-        var bubbles2Texture = cc.textureCache.addImage(res.bubbles2_png),
+        cc.spriteFrameCache.addSpriteFrames(resSpriteSheet.bubbles2_plist);
+        var bubbles2Texture = cc.textureCache.addImage(resSpriteSheet.bubbles2_png),
             bubbles2Image  = cc.SpriteBatchNode.create(bubbles2Texture);
         this.addChild(bubbles2Image);
 

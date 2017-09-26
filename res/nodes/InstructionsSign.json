@@ -17,7 +17,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "sprites/ui/panel.png",
+              "Path": "../sprites/ui/panel.png",
               "Plist": ""
             },
             "BlendFunc": {
@@ -62,7 +62,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "sprites/ui/woodsign.png",
+              "Path": "../sprites/ui/woodsign.png",
               "Plist": ""
             },
             "BlendFunc": {
@@ -107,7 +107,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "sprites/ui/woodsign.png",
+              "Path": "../sprites/ui/woodsign.png",
               "Plist": ""
             },
             "BlendFunc": {
@@ -154,7 +154,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "sprites/ui/rope.png",
+              "Path": "../sprites/ui/rope.png",
               "Plist": ""
             },
             "BlendFunc": {
@@ -199,7 +199,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "sprites/ui/rope.png",
+              "Path": "../sprites/ui/rope.png",
               "Plist": ""
             },
             "BlendFunc": {
@@ -244,7 +244,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "sprites/ui/ropeHalf.png",
+              "Path": "../sprites/ui/ropeHalf.png",
               "Plist": ""
             },
             "BlendFunc": {
@@ -289,7 +289,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "sprites/ui/ropeHalf.png",
+              "Path": "../sprites/ui/ropeHalf.png",
               "Plist": ""
             },
             "BlendFunc": {
@@ -334,7 +334,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "sprites/ui/rope.png",
+              "Path": "../sprites/ui/rope.png",
               "Plist": ""
             },
             "BlendFunc": {
@@ -379,7 +379,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "sprites/ui/rope.png",
+              "Path": "../sprites/ui/rope.png",
               "Plist": ""
             },
             "BlendFunc": {

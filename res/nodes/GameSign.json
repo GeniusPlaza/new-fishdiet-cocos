@@ -17,7 +17,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "sprites/ui/panel.png",
+              "Path": "../sprites/ui/panel.png",
               "Plist": ""
             },
             "BlendFunc": {
@@ -62,7 +62,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "sprites/ui/woodsign.png",
+              "Path": "../sprites/ui/woodsign.png",
               "Plist": ""
             },
             "BlendFunc": {
@@ -107,7 +107,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "sprites/ui/gameImage.png",
+              "Path": "../sprites/ui/gameImage.png",
               "Plist": ""
             },
             "BlendFunc": {
@@ -152,7 +152,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "sprites/ui/rope.png",
+              "Path": "../sprites/ui/rope.png",
               "Plist": ""
             },
             "BlendFunc": {
@@ -197,7 +197,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "sprites/ui/rope.png",
+              "Path": "../sprites/ui/rope.png",
               "Plist": ""
             },
             "BlendFunc": {
@@ -242,7 +242,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "sprites/ui/ropeHalf.png",
+              "Path": "../sprites/ui/ropeHalf.png",
               "Plist": ""
             },
             "BlendFunc": {
@@ -289,7 +289,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "sprites/ui/ropeHalf.png",
+              "Path": "../sprites/ui/ropeHalf.png",
               "Plist": ""
             },
             "BlendFunc": {
@@ -339,7 +339,7 @@
             "LabelText": "",
             "FontResource": {
               "Type": "Normal",
-              "Path": "../fonts/Vanilla copy.ttf",
+              "Path": "fonts/Vanilla copy.ttf",
               "Plist": ""
             },
             "HorizontalAlignmentType": "HT_Center",
@@ -399,7 +399,7 @@
             "LabelText": "Questions",
             "FontResource": {
               "Type": "Normal",
-              "Path": "../fonts/Vanilla copy.ttf",
+              "Path": "fonts/Vanilla copy.ttf",
               "Plist": ""
             },
             "HorizontalAlignmentType": "HT_Center",
@@ -461,7 +461,7 @@
             "LabelText": "",
             "FontResource": {
               "Type": "Normal",
-              "Path": "../fonts/Vanilla copy.ttf",
+              "Path": "fonts/Vanilla copy.ttf",
               "Plist": ""
             },
             "HorizontalAlignmentType": "HT_Center",
@@ -526,7 +526,7 @@
         "ctype": "SingleNodeObjectData"
       },
       "UsedResources": [
-        "../../fonts/Vanilla copy.ttf",
+        "../fonts/Vanilla copy.ttf",
         "../sprites/ui/gameImage.png",
         "../sprites/ui/panel.png",
         "../sprites/ui/rope.png",

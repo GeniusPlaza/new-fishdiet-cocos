@@ -17,7 +17,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "sprites/tutorial/tutorial1.png",
+              "Path": "../sprites/tutorial/tutorial1.png",
               "Plist": ""
             },
             "BlendFunc": {
@@ -29,7 +29,7 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 545.0001,
+              "X": 525.0001,
               "Y": 584.0012
             },
             "Scale": {
@@ -58,7 +58,7 @@
                 "LabelText": "Touch your fish and \ndrag it around the water.\n",
                 "FontResource": {
                   "Type": "Normal",
-                  "Path": "../fonts/Montserrat-Regular.ttf",
+                  "Path": "fonts/Montserrat-Regular.ttf",
                   "Plist": ""
                 },
                 "HorizontalAlignmentType": "HT_Center",
@@ -125,7 +125,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "sprites/tutorial/tutorial2.png",
+              "Path": "../sprites/tutorial/tutorial2.png",
               "Plist": ""
             },
             "BlendFunc": {
@@ -166,7 +166,7 @@
                 "LabelText": "Follow your doctor's diet and eat the right fish.",
                 "FontResource": {
                   "Type": "Normal",
-                  "Path": "../fonts/Montserrat-Regular.ttf",
+                  "Path": "fonts/Montserrat-Regular.ttf",
                   "Plist": ""
                 },
                 "HorizontalAlignmentType": "HT_Center",
@@ -233,7 +233,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "sprites/tutorial/tutorial3.png",
+              "Path": "../sprites/tutorial/tutorial3.png",
               "Plist": ""
             },
             "BlendFunc": {
@@ -245,7 +245,7 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 1375.0,
+              "X": 1400.0,
               "Y": 584.0012
             },
             "Scale": {
@@ -274,7 +274,7 @@
                 "LabelText": "Your fish will grow big and healthy.\n",
                 "FontResource": {
                   "Type": "Normal",
-                  "Path": "../fonts/Montserrat-Regular.ttf",
+                  "Path": "fonts/Montserrat-Regular.ttf",
                   "Plist": ""
                 },
                 "HorizontalAlignmentType": "HT_Center",
@@ -343,7 +343,7 @@
             "ButtonText": "",
             "FontResource": {
               "Type": "Normal",
-              "Path": "../fonts/Vanilla copy.ttf",
+              "Path": "fonts/Vanilla copy.ttf",
               "Plist": ""
             },
             "TextColor": {
@@ -353,7 +353,7 @@
             },
             "NormalFileData": {
               "Type": "Normal",
-              "Path": "sprites/ui/btn_up.png",
+              "Path": "../sprites/ui/btn_up.png",
               "Plist": ""
             },
             "Scale9Enable": true,
@@ -379,7 +379,7 @@
             },
             "Position": {
               "X": 967.743,
-              "Y": 236.6958
+              "Y": 220.6958
             },
             "Scale": {
               "ScaleX": 0.6,
@@ -406,7 +406,7 @@
                 "LabelText": "Play\n",
                 "FontResource": {
                   "Type": "Normal",
-                  "Path": "../fonts/Vanilla copy.ttf",
+                  "Path": "fonts/Vanilla copy.ttf",
                   "Plist": ""
                 },
                 "HorizontalAlignmentType": "HT_Center",
@@ -478,8 +478,8 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
-        "../../fonts/Montserrat-Regular.ttf",
-        "../../fonts/Vanilla copy.ttf",
+        "../fonts/Montserrat-Regular.ttf",
+        "../fonts/Vanilla copy.ttf",
         "../sprites/tutorial/tutorial1.png",
         "../sprites/tutorial/tutorial2.png",
         "../sprites/tutorial/tutorial3.png",

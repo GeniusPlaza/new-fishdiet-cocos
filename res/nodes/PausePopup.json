@@ -17,7 +17,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "sprites/ui/panel-complete.png",
+              "Path": "../sprites/ui/panel-complete.png",
               "Plist": ""
             },
             "BlendFunc": {
@@ -64,7 +64,7 @@
             "ButtonText": "",
             "FontResource": {
               "Type": "Normal",
-              "Path": "../fonts/Vanilla copy.ttf",
+              "Path": "fonts/Vanilla copy.ttf",
               "Plist": ""
             },
             "TextColor": {
@@ -74,7 +74,7 @@
             },
             "NormalFileData": {
               "Type": "Normal",
-              "Path": "sprites/ui/btn_up.png",
+              "Path": "../sprites/ui/btn_up.png",
               "Plist": ""
             },
             "Scale9Enable": true,
@@ -127,7 +127,7 @@
                 "LabelText": "Resume",
                 "FontResource": {
                   "Type": "Normal",
-                  "Path": "../fonts/Vanilla copy.ttf",
+                  "Path": "fonts/Vanilla copy.ttf",
                   "Plist": ""
                 },
                 "HorizontalAlignmentType": "HT_Center",
@@ -195,7 +195,7 @@
             "LabelText": "Paused",
             "FontResource": {
               "Type": "Normal",
-              "Path": "../fonts/Vanilla copy.ttf",
+              "Path": "fonts/Vanilla copy.ttf",
               "Plist": ""
             },
             "HorizontalAlignmentType": "HT_Center",
@@ -254,12 +254,12 @@
           {
             "ProgressBarData": {
               "Type": "Normal",
-              "Path": "sprites/ui/ropeSlider.png",
+              "Path": "../sprites/ui/ropeSlider.png",
               "Plist": ""
             },
             "BallNormalData": {
               "Type": "Normal",
-              "Path": "sprites/ui/slider_handler2.png",
+              "Path": "../sprites/ui/slider_handler2.png",
               "Plist": ""
             },
             "PercentInfo": 100,
@@ -304,12 +304,12 @@
           {
             "ProgressBarData": {
               "Type": "Normal",
-              "Path": "sprites/ui/ropeSlider.png",
+              "Path": "../sprites/ui/ropeSlider.png",
               "Plist": ""
             },
             "BallNormalData": {
               "Type": "Normal",
-              "Path": "sprites/ui/slider_handler2.png",
+              "Path": "../sprites/ui/slider_handler2.png",
               "Plist": ""
             },
             "PercentInfo": 100,
@@ -356,7 +356,7 @@
             "LabelText": "Music",
             "FontResource": {
               "Type": "Normal",
-              "Path": "../fonts/Vanilla copy.ttf",
+              "Path": "fonts/Vanilla copy.ttf",
               "Plist": ""
             },
             "HorizontalAlignmentType": "HT_Center",
@@ -416,7 +416,7 @@
             "LabelText": "Sound Effects",
             "FontResource": {
               "Type": "Normal",
-              "Path": "../fonts/Vanilla copy.ttf",
+              "Path": "fonts/Vanilla copy.ttf",
               "Plist": ""
             },
             "HorizontalAlignmentType": "HT_Center",
@@ -479,7 +479,7 @@
         "ctype": "SingleNodeObjectData"
       },
       "UsedResources": [
-        "../../fonts/Vanilla copy.ttf",
+        "../fonts/Vanilla copy.ttf",
         "../sprites/ui/btn_up.png",
         "../sprites/ui/panel-complete.png",
         "../sprites/ui/ropeSlider.png",
