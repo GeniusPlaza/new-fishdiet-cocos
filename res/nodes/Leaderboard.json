@@ -17,7 +17,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "sprites/ui/resultsPanel.png",
+              "Path": "../sprites/ui/resultsPanel.png",
               "Plist": ""
             },
             "BlendFunc": {
@@ -64,7 +64,7 @@
             "LabelText": "Completed!",
             "FontResource": {
               "Type": "Normal",
-              "Path": "../fonts/Vanilla copy.ttf",
+              "Path": "fonts/Vanilla copy.ttf",
               "Plist": ""
             },
             "OutlineSize": 5,
@@ -123,7 +123,7 @@
             "LabelText": "Score",
             "FontResource": {
               "Type": "Normal",
-              "Path": "../fonts/Vanilla copy.ttf",
+              "Path": "fonts/Vanilla copy.ttf",
               "Plist": ""
             },
             "OutlineSize": 5,
@@ -182,7 +182,7 @@
             "LabelText": "0",
             "FontResource": {
               "Type": "Normal",
-              "Path": "../fonts/Vanilla copy.ttf",
+              "Path": "fonts/Vanilla copy.ttf",
               "Plist": ""
             },
             "HorizontalAlignmentType": "HT_Center",
@@ -242,7 +242,7 @@
             "LabelText": "Leaderboard",
             "FontResource": {
               "Type": "Normal",
-              "Path": "../fonts/Vanilla copy.ttf",
+              "Path": "fonts/Vanilla copy.ttf",
               "Plist": ""
             },
             "OutlineSize": 5,
@@ -358,7 +358,7 @@
             },
             "NormalFileData": {
               "Type": "Normal",
-              "Path": "sprites/ui/end_btn_bg.png",
+              "Path": "../sprites/ui/end_btn_bg.png",
               "Plist": ""
             },
             "Scale9Enable": true,
@@ -409,7 +409,7 @@
               {
                 "FileData": {
                   "Type": "Normal",
-                  "Path": "sprites/ui/comment-512.png",
+                  "Path": "../sprites/ui/comment-512.png",
                   "Plist": ""
                 },
                 "BlendFunc": {
@@ -470,7 +470,7 @@
             },
             "NormalFileData": {
               "Type": "Normal",
-              "Path": "sprites/ui/highFiveBtn.png",
+              "Path": "../sprites/ui/highFiveBtn.png",
               "Plist": ""
             },
             "Scale9Enable": true,
@@ -535,12 +535,12 @@
             },
             "PressedFileData": {
               "Type": "Normal",
-              "Path": "sprites/ui/replay_down.png",
+              "Path": "../sprites/ui/replay_down.png",
               "Plist": ""
             },
             "NormalFileData": {
               "Type": "Normal",
-              "Path": "sprites/ui/replay_up.png",
+              "Path": "../sprites/ui/replay_up.png",
               "Plist": ""
             },
             "Scale9Enable": true,
@@ -605,7 +605,7 @@
             },
             "NormalFileData": {
               "Type": "Normal",
-              "Path": "sprites/ui/highFiveBtnPress.png",
+              "Path": "../sprites/ui/highFiveBtnPress.png",
               "Plist": ""
             },
             "Scale9Enable": true,
@@ -670,7 +670,7 @@
         "ctype": "SingleNodeObjectData"
       },
       "UsedResources": [
-        "../../fonts/Vanilla copy.ttf",
+        "../fonts/Vanilla copy.ttf",
         "../sprites/ui/comment-512.png",
         "../sprites/ui/end_btn_bg.png",
         "../sprites/ui/highFiveBtn.png",

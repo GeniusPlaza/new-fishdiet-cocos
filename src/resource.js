@@ -17,7 +17,9 @@ var resImages = {
     seaHorse: "res/sprites/fishes/seaHorse/seahorse0001.png",
     blowFish: "res/sprites/fishes/blowFish/blowfish0001.png",
     pinkFish: "res/sprites/fishes/pinkFish/pinkfish0001.png",
-    playerFish: "res/sprites/fishes/playerFish/playerfish0001.png"
+    playerFish: "res/sprites/fishes/playerFish/playerfish0001.png",
+    sliderHanlder: "res/sprites/ui/slider_handler2.png",
+    ropeSlider: "res/sprites/ui/ropeSlider.png"
 };
 
 var resJson = {
@@ -26,19 +28,17 @@ var resJson = {
 //    enemyFish: "res/nodes/EnemyFish.json",
     gameSign: "res/nodes/GameSign.json",
     instructionsSign: "res/nodes/InstructionsSign.json",
-//    leaderboard: "res/nodes/Leaderboard.json",
-//    livesSign: "res/nodes/LivesSign.json",
+    leaderboard: "res/nodes/Leaderboard.json",
+    livesSign: "res/nodes/LivesSign.json",
+    scoreSign: "res/nodes/ScoreSign.json",
+    timerSign: "res/nodes/TimerSign.json",
     pausePopup: "res/nodes/PausePopup.json",
-//    reflectionPanel: "res/nodes/ReflectionPanel.json",
-//    scoreSign: "res/nodes/ScoreSign.json",
-//    timerSign: "res/nodes/TimerSign.json",
+    reflectionPanel: "res/nodes/ReflectionPanel.json",
     titleSign: "res/nodes/TitleSign.json",
     
     titleLayer: "res/layers/TitleLayer.json",
     instructionsLayer: "res/layers/InstructionLayer.json",
-    backgroundLayer: "res/layers/BackgroundLayer.json",
-//    reflectionLayer: "res/layers/ReflectionLayer.json",
-//    leaderboardLayer: "res/layers/LeaderboardLayer.json",
+    backgroundLayer: "res/layers/BackgroundLayer.json"
 }
 
 var g_resources = [];

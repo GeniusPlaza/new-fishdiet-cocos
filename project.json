@@ -15,13 +15,14 @@
         "src/resource.js",
         
         "src/ui/layers/blackLayer.js",
+        "src/ui/layers/backgroundLayer.js",
         "src/ui/layers/pauseLayer.js",
         "src/ui/layers/titleLayer.js",
         "src/ui/layers/startLayer.js",
         "src/ui/layers/instructionsLayer.js",
+        "src/ui/layers/gameLayer.js",
         "src/ui/layers/reflectionLayer.js",
         "src/ui/layers/leaderboardLayer.js",
-        "src/ui/layers/backgroundLayer.js",
         
         "src/ui/gameScene.js"
     ]

@@ -199,7 +199,7 @@
             "LabelText": "60",
             "FontResource": {
               "Type": "Normal",
-              "Path": "../fonts/Vanilla copy.ttf",
+              "Path": "fonts/Vanilla copy.ttf",
               "Plist": ""
             },
             "HorizontalAlignmentType": "HT_Center",

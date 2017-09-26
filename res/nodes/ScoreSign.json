@@ -17,7 +17,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "sprites/ui/panel.png",
+              "Path": "../sprites/ui/panel.png",
               "Plist": ""
             },
             "BlendFunc": {
@@ -62,7 +62,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "sprites/ui/rope.png",
+              "Path": "../sprites/ui/rope.png",
               "Plist": ""
             },
             "BlendFunc": {
@@ -107,7 +107,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "sprites/ui/rope.png",
+              "Path": "../sprites/ui/rope.png",
               "Plist": ""
             },
             "BlendFunc": {
@@ -154,7 +154,7 @@
             "LabelText": "Score",
             "FontResource": {
               "Type": "Normal",
-              "Path": "../fonts/Vanilla copy.ttf",
+              "Path": "fonts/Vanilla copy.ttf",
               "Plist": ""
             },
             "OutlineSize": 5,
@@ -211,7 +211,7 @@
             "LabelText": "0",
             "FontResource": {
               "Type": "Normal",
-              "Path": "../fonts/Vanilla copy.ttf",
+              "Path": "fonts/Vanilla copy.ttf",
               "Plist": ""
             },
             "HorizontalAlignmentType": "HT_Center",
@@ -274,7 +274,7 @@
         "ctype": "SingleNodeObjectData"
       },
       "UsedResources": [
-        "../../fonts/Vanilla copy.ttf",
+        "../fonts/Vanilla copy.ttf",
         "../sprites/ui/panel.png",
         "../sprites/ui/rope.png"
       ],

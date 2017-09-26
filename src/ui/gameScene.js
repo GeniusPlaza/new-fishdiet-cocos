@@ -21,13 +21,23 @@ var GameScene = cc.Scene.extend({
         this.addChild(start, 0);
         start.setVisible(false);
         
+        var game = new GameLayer();
+        this.addChild(game, 0);
+        game.setVisible(false);
+        
+        var leaderboard = new LeaderboardLayer();
+        this.addChild(leaderboard, 0);
+        leaderboard.setVisible(false);
+        
         var hud = new PauseLayer();
         this.addChild(hud, 10);
         
         this.layers = {
             "title": title,
             "instructions": instructions,
-            "start": start
+            "start": start,
+            "game": game,
+            "leaderboard": leaderboard
         }
     },
     onEnter:function () {

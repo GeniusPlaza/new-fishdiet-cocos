@@ -17,7 +17,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "sprites/ui/panel.png",
+              "Path": "../sprites/ui/panel.png",
               "Plist": ""
             },
             "BlendFunc": {
@@ -29,12 +29,12 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 17.1525,
-              "Y": -69.6038
+              "X": 0.0,
+              "Y": -69.602
             },
             "Scale": {
-              "ScaleX": 1.0,
-              "ScaleY": 1.0
+              "ScaleX": 1.5,
+              "ScaleY": 1.5
             },
             "CColor": {},
             "IconVisible": false,
@@ -46,10 +46,10 @@
               "X": 0.0,
               "Y": 0.0
             },
-            "LeftMargin": -491.8475,
-            "RightMargin": -526.1525,
-            "TopMargin": -251.8962,
-            "BottomMargin": -391.1038,
+            "LeftMargin": -509.0,
+            "RightMargin": -509.0,
+            "TopMargin": -251.898,
+            "BottomMargin": -391.102,
             "Tag": 1072,
             "ActionTag": -124624109,
             "Size": {
@@ -65,7 +65,7 @@
             "LabelText": "",
             "FontResource": {
               "Type": "Normal",
-              "Path": "../fonts/Montserrat-Regular.ttf",
+              "Path": "fonts/Montserrat-Regular.ttf",
               "Plist": ""
             },
             "HorizontalAlignmentType": "HT_Center",
@@ -115,68 +115,9 @@
             "ctype": "TextObjectData"
           },
           {
-            "FontSize": 60,
-            "LabelText": "Instructions\n",
-            "FontResource": {
-              "Type": "Normal",
-              "Path": "../fonts/Vanilla copy.ttf",
-              "Plist": ""
-            },
-            "OutlineSize": 5,
-            "OutlineColor": {},
-            "OutlineEnabled": true,
-            "ShadowColor": {
-              "R": 110,
-              "G": 110,
-              "B": 110
-            },
-            "ShadowOffsetX": 2.0,
-            "ShadowOffsetY": -2.0,
-            "AnchorPoint": {
-              "ScaleX": 0.5,
-              "ScaleY": 0.5
-            },
-            "Position": {
-              "X": 14.4087,
-              "Y": 185.5821
-            },
-            "Scale": {
-              "ScaleX": 1.0,
-              "ScaleY": 1.0
-            },
-            "RotationSkewX": -2.9936,
-            "RotationSkewY": -2.9948,
-            "CColor": {
-              "R": 248,
-              "G": 140,
-              "B": 25
-            },
-            "IconVisible": false,
-            "PrePosition": {
-              "X": 0.0,
-              "Y": 0.0
-            },
-            "PreSize": {
-              "X": 0.0,
-              "Y": 0.0
-            },
-            "LeftMargin": -243.5913,
-            "RightMargin": -272.4087,
-            "TopMargin": -258.5821,
-            "BottomMargin": 112.5821,
-            "Tag": 1066,
-            "ActionTag": -2022190117,
-            "Size": {
-              "X": 516.0,
-              "Y": 146.0
-            },
-            "Name": "panelTitle",
-            "ctype": "TextObjectData"
-          },
-          {
             "FileData": {
               "Type": "Normal",
-              "Path": "sprites/ui/woodsign.png",
+              "Path": "../sprites/ui/woodsign.png",
               "Plist": ""
             },
             "BlendFunc": {
@@ -188,12 +129,12 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 17.1942,
-              "Y": 219.5204
+              "X": 0.0,
+              "Y": 384.7297
             },
             "Scale": {
-              "ScaleX": 0.6,
-              "ScaleY": 0.5
+              "ScaleX": 0.9,
+              "ScaleY": 0.75
             },
             "CColor": {},
             "IconVisible": false,
@@ -205,10 +146,10 @@
               "X": 0.0,
               "Y": 0.0
             },
-            "LeftMargin": -568.8058,
-            "RightMargin": -603.1942,
-            "TopMargin": -384.5204,
-            "BottomMargin": 54.5204,
+            "LeftMargin": -586.0,
+            "RightMargin": -586.0,
+            "TopMargin": -549.7297,
+            "BottomMargin": 219.7297,
             "Tag": 1071,
             "ActionTag": -283584286,
             "Size": {
@@ -221,7 +162,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "sprites/ui/rope.png",
+              "Path": "../sprites/ui/rope.png",
               "Plist": ""
             },
             "BlendFunc": {
@@ -233,8 +174,8 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 294.9973,
-              "Y": 465.5964
+              "X": 416.6517,
+              "Y": 654.9517
             },
             "Scale": {
               "ScaleX": 0.6,
@@ -250,10 +191,10 @@
               "X": 0.0,
               "Y": 0.0
             },
-            "LeftMargin": 266.4973,
-            "RightMargin": -323.4973,
-            "TopMargin": -708.5964,
-            "BottomMargin": 222.5964,
+            "LeftMargin": 388.1517,
+            "RightMargin": -445.1517,
+            "TopMargin": -897.9517,
+            "BottomMargin": 411.9517,
             "Tag": 1067,
             "ActionTag": 754708000,
             "Size": {
@@ -266,7 +207,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "sprites/ui/rope.png",
+              "Path": "../sprites/ui/rope.png",
               "Plist": ""
             },
             "BlendFunc": {
@@ -278,8 +219,8 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": -280.6222,
-              "Y": 444.5808
+              "X": -444.6294,
+              "Y": 623.4858
             },
             "Scale": {
               "ScaleX": 0.6,
@@ -295,10 +236,10 @@
               "X": 0.0,
               "Y": 0.0
             },
-            "LeftMargin": -309.1222,
-            "RightMargin": 252.1222,
-            "TopMargin": -687.5808,
-            "BottomMargin": 201.5808,
+            "LeftMargin": -473.1294,
+            "RightMargin": 416.1294,
+            "TopMargin": -866.4858,
+            "BottomMargin": 380.4858,
             "Tag": 1068,
             "ActionTag": -2088968617,
             "Size": {
@@ -311,7 +252,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "sprites/ui/rope.png",
+              "Path": "../sprites/ui/rope.png",
               "Plist": ""
             },
             "BlendFunc": {
@@ -323,11 +264,11 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": -423.7706,
-              "Y": 435.7649
+              "X": -658.9789,
+              "Y": 572.9679
             },
             "Scale": {
-              "ScaleX": 0.9,
+              "ScaleX": 1.15,
               "ScaleY": 1.0
             },
             "CColor": {},
@@ -340,10 +281,10 @@
               "X": 0.0,
               "Y": 0.0
             },
-            "LeftMargin": -452.2706,
-            "RightMargin": 395.2706,
-            "TopMargin": -678.7649,
-            "BottomMargin": 192.7649,
+            "LeftMargin": -687.4789,
+            "RightMargin": 630.4789,
+            "TopMargin": -815.9679,
+            "BottomMargin": 329.9679,
             "Tag": 1069,
             "ActionTag": 248545132,
             "Size": {
@@ -356,7 +297,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "sprites/ui/rope.png",
+              "Path": "../sprites/ui/rope.png",
               "Plist": ""
             },
             "BlendFunc": {
@@ -368,11 +309,11 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 440.0449,
-              "Y": 418.7039
+              "X": 638.4998,
+              "Y": 555.9069
             },
             "Scale": {
-              "ScaleX": 0.9,
+              "ScaleX": 1.15,
               "ScaleY": 1.0
             },
             "CColor": {},
@@ -385,10 +326,10 @@
               "X": 0.0,
               "Y": 0.0
             },
-            "LeftMargin": 411.5449,
-            "RightMargin": -468.5449,
-            "TopMargin": -661.7039,
-            "BottomMargin": 175.7039,
+            "LeftMargin": 609.9998,
+            "RightMargin": -666.9998,
+            "TopMargin": -798.9069,
+            "BottomMargin": 312.9069,
             "Tag": 1070,
             "ActionTag": -1318120576,
             "Size": {
@@ -399,11 +340,11 @@
             "ctype": "SpriteObjectData"
           },
           {
-            "FontSize": 75,
+            "FontSize": 100,
             "LabelText": "Reflection",
             "FontResource": {
               "Type": "Normal",
-              "Path": "../fonts/Vanilla copy.ttf",
+              "Path": "fonts/Vanilla copy.ttf",
               "Plist": ""
             },
             "HorizontalAlignmentType": "HT_Center",
@@ -423,14 +364,14 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 14.7091,
-              "Y": 205.8088
+              "X": 0.0,
+              "Y": 393.0698
             },
             "Scale": {
               "ScaleX": 1.0,
               "ScaleY": 1.0
             },
-            "RotationSkewX": -2.4562,
+            "RotationSkewX": -2.4557,
             "RotationSkewY": -2.4557,
             "CColor": {
               "R": 248,
@@ -446,15 +387,15 @@
               "X": 0.0,
               "Y": 0.0
             },
-            "LeftMargin": -234.2909,
-            "RightMargin": -263.7091,
-            "TopMargin": -250.3088,
-            "BottomMargin": 161.3088,
+            "LeftMargin": -330.0,
+            "RightMargin": -330.0,
+            "TopMargin": -450.5698,
+            "BottomMargin": 335.5698,
             "Tag": 1073,
             "ActionTag": -1491301529,
             "Size": {
-              "X": 498.0,
-              "Y": 89.0
+              "X": 660.0,
+              "Y": 115.0
             },
             "Name": "Text_6",
             "ctype": "TextObjectData"
@@ -462,7 +403,7 @@
           {
             "FontResource": {
               "Type": "Normal",
-              "Path": "../fonts/Montserrat-Regular.ttf",
+              "Path": "fonts/Montserrat-Regular.ttf",
               "Plist": ""
             },
             "FontSize": 40,
@@ -476,8 +417,8 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 14.7068,
-              "Y": -90.8536
+              "X": 0.0,
+              "Y": -81.0512
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -493,18 +434,149 @@
               "X": 0.0,
               "Y": 0.0
             },
-            "LeftMargin": -410.2932,
-            "RightMargin": -439.7068,
-            "TopMargin": -134.1464,
-            "BottomMargin": -315.8536,
+            "LeftMargin": -650.0,
+            "RightMargin": -650.0,
+            "TopMargin": -218.9488,
+            "BottomMargin": -381.0512,
             "Tag": 1074,
             "ActionTag": -1655882923,
             "Size": {
-              "X": 850.0,
-              "Y": 450.0
+              "X": 1300.0,
+              "Y": 600.0
             },
             "Name": "reflectionsField",
             "ctype": "TextFieldObjectData"
+          },
+          {
+            "FontSize": 80,
+            "ButtonText": "",
+            "FontResource": {
+              "Type": "Normal",
+              "Path": "fonts/Vanilla copy.ttf",
+              "Plist": ""
+            },
+            "TextColor": {
+              "R": 248,
+              "G": 140,
+              "B": 25
+            },
+            "NormalFileData": {
+              "Type": "Normal",
+              "Path": "../sprites/ui/btn_up.png",
+              "Plist": ""
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 11,
+            "Scale9Width": 408,
+            "Scale9Height": 308,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 0.0,
+              "Y": -497.1737
+            },
+            "Scale": {
+              "ScaleX": 0.6,
+              "ScaleY": 0.6
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -275.0,
+            "RightMargin": -275.0,
+            "TopMargin": 322.1737,
+            "BottomMargin": -672.1737,
+            "Tag": 1815,
+            "Children": [
+              {
+                "FontSize": 90,
+                "LabelText": "Submit",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/Vanilla copy.ttf",
+                  "Plist": ""
+                },
+                "HorizontalAlignmentType": "HT_Center",
+                "VerticalAlignmentType": "VT_Center",
+                "OutlineSize": 8,
+                "OutlineColor": {},
+                "OutlineEnabled": true,
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 275.1321,
+                  "Y": 169.7784
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 248,
+                  "G": 140,
+                  "B": 25
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5002,
+                  "Y": 0.4851
+                },
+                "PreSize": {
+                  "X": 0.7655,
+                  "Y": 0.3171
+                },
+                "LeftMargin": 64.6321,
+                "RightMargin": 64.3679,
+                "TopMargin": 124.7216,
+                "BottomMargin": 114.2784,
+                "Tag": 1816,
+                "ActionTag": -65452197,
+                "Size": {
+                  "X": 421.0,
+                  "Y": 111.0
+                },
+                "Name": "text",
+                "ctype": "TextObjectData"
+              }
+            ],
+            "ActionTag": 2117590236,
+            "Size": {
+              "X": 550.0,
+              "Y": 350.0
+            },
+            "Name": "submitBtn",
+            "ctype": "ButtonObjectData"
           }
         ],
         "Size": {
@@ -515,8 +587,9 @@
         "ctype": "SingleNodeObjectData"
       },
       "UsedResources": [
-        "../../fonts/Montserrat-Regular.ttf",
-        "../../fonts/Vanilla copy.ttf",
+        "../fonts/Montserrat-Regular.ttf",
+        "../fonts/Vanilla copy.ttf",
+        "../sprites/ui/btn_up.png",
         "../sprites/ui/panel.png",
         "../sprites/ui/rope.png",
         "../sprites/ui/woodsign.png"

@@ -1,6 +1,5 @@
 
 var StartLayer = cc.Layer.extend({
-    sprite:null,
     ctor:function () {
         //////////////////////////////
         // 1. super init first
@@ -33,7 +32,6 @@ var StartLayer = cc.Layer.extend({
         this.instructionsSign.runAction(
             new cc.RepeatForever(
                 new cc.Sequence(
-                    new cc.DelayTime(.5),
                     new cc.MoveBy(5, cc.p(0, 25)),
                     new cc.MoveBy(5, cc.p(0, -25))
                 )
@@ -69,7 +67,7 @@ var StartLayer = cc.Layer.extend({
     },
     onPlayBtnTouch: function (sender, type) {
         if (type === ccui.Widget.TOUCH_ENDED) {
-            this.parent.transitionTo("start");
+            this.parent.transitionTo("leaderboard");
         }
     }
 });
