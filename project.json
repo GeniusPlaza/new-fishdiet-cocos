@@ -14,8 +14,17 @@
     "jsList" : [
         "src/resource.js",
         
+        
         "src/engine/models/question.js",
         "src/engine/models/answer.js",
+        "src/engine/models/highscore.js",
+        
+        "src/engine/config.js",
+        "src/engine/gameData.js",
+        "src/engine/geniusPlazaAPI.js",
+        "src/engine/state.js",
+        "src/engine/fishDiet.js",
+        
         
         "src/ui/layers/blackLayer.js",
         "src/ui/layers/backgroundLayer.js",
