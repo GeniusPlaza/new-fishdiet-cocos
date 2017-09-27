@@ -8,22 +8,23 @@ var GeniusPlazaAPI = {
     username: "",
     siteUrl: "",
     loadGame: function () {
-        $.post(
-            "/en/games",
-            {action: 'loadgame', gameid: this.gameid},
-            function(response)
-            {
-                if (response.result=='ok')
-                {
-                    return response.data;
-                }
-                else
-                {
-                    console.log(response);
-                    return null;
-                }
-            }
-        );
+        return exampleGameData;
+//        $.post(
+//            "/en/games",
+//            {action: 'loadgame', gameid: this.gameid},
+//            function(response)
+//            {
+//                if (response.result=='ok')
+//                {
+//                    return response.data;
+//                }
+//                else
+//                {
+//                    console.log(response);
+//                    return null;
+//                }
+//            }
+//        );
     },
     loadUser: function () {
         $.post(
@@ -51,7 +52,7 @@ var GeniusPlazaAPI = {
             {			
                 if (response.result=='ok')
                 {
-                    return = response.highscores;
+                    return response.highscores;
                 }
                 else
                 {

@@ -1,6 +1,6 @@
 // Facade for the engine
 // Orchestrate the different components
-var FishDiet = function () {
+var FishDiet = new function () {
     var api = GeniusPlazaAPI;
     
     this.data = new GameData();

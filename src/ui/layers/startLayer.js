@@ -15,10 +15,22 @@ var StartLayer = cc.Layer.extend({
         this.addChild(instructionsSign);
         instructionsSign.setName("instructionsSign");
         
+        // set text
+        var panelLabel = instructionsSign.getChildByName("panelText");
+        panelLabel.setText(FishDiet.data.getInstructions());
+        
         var gameSign = ccs.load(resJson.gameSign).node;
         gameSign.setScale(.6, .6);
         gameSign.setName("gameSign");
         this.addChild(gameSign);
+        
+        // set text
+        var title = gameSign.getChildByName("gameTitleText");
+        title.setText(FishDiet.data.getTitle());
+        var questionsCount = gameSign.getChildByName("questionsNumber");
+        questionsCount.setText(
+            ["1", FishDiet.data.getQuestions().length].join('/')
+        );
         
         var playBtn = ccs.load(resJson.button).node;
         playBtn.setName("playBtn");

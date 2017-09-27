@@ -529,8 +529,8 @@
             "Tag": 250,
             "ActionTag": -77975251,
             "Size": {
-              "X": 850.0,
-              "Y": 400.0
+              "X": 950.0,
+              "Y": 450.0
             },
             "Name": "panelText",
             "ctype": "TextObjectData"
@@ -538,7 +538,7 @@
           {
             "IsCustomSize": true,
             "FontSize": 55,
-            "LabelText": "\n",
+            "LabelText": "",
             "FontResource": {
               "Type": "Normal",
               "Path": "fonts/Montserrat-Regular.ttf",

@@ -335,7 +335,7 @@
           },
           {
             "IsCustomSize": true,
-            "FontSize": 40,
+            "FontSize": 50,
             "LabelText": "",
             "FontResource": {
               "Type": "Normal",
@@ -388,7 +388,7 @@
             "ActionTag": -1257294792,
             "Size": {
               "X": 700.0,
-              "Y": 225.0
+              "Y": 250.0
             },
             "Name": "gameTitleText",
             "ctype": "TextObjectData"

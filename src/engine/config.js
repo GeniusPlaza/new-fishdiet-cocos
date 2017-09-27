@@ -1,2 +1,3 @@
 var MAX_LIVES = 3;
 var SCORE_PER_FISH = 100;
+var TIMER_MAX = 60;

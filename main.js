@@ -1,3 +1,4 @@
+
 cc.game.onStart = function(){
     var sys = cc.sys;
     if(!sys.isNative && document.getElementById("cocosLoading")) //If referenced loading.js, please remove it
@@ -27,9 +28,12 @@ cc.game.onStart = function(){
 
     //load resources
     cc.LoaderScene.preload(g_resources, function () {
+        FishDiet.loadGame("31531");
+        
         cc.director.runScene(
             new GameScene()
         );
     }, this);
 };
+
 cc.game.run();

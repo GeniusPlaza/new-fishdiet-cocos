@@ -13,7 +13,7 @@
 
     "jsList" : [
         "src/resource.js",
-        
+        "src/example_data.js",
         
         "src/engine/models/question.js",
         "src/engine/models/answer.js",
@@ -21,8 +21,8 @@
         
         "src/engine/config.js",
         "src/engine/gameData.js",
+        "src/engine/gameState.js",
         "src/engine/geniusPlazaAPI.js",
-        "src/engine/state.js",
         "src/engine/fishDiet.js",
         
         

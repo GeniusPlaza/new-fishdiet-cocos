@@ -1,4 +1,4 @@
-{
+var exampleGameData = {
   "id": 31531,
   "user": 2293,
   "type": "game",
@@ -622,4 +622,45 @@
       ]
     }
   ]
-}
+};
+
+var exampleLeaderboardData = {
+	"highscores": [
+		{
+			"id": 7297,
+			"user": 8252,
+			"resource": 31531,
+			"score": 6200,
+			"username": "kkmodi"
+		},
+		{
+			"id": 3883,
+			"user": 55841,
+			"resource": 31531,
+			"score": 2800,
+			"username": "kecito"
+		},
+		{
+			"id": 5512,
+			"user": 61206,
+			"resource": 31531,
+			"score": 2700,
+			"username": "student_kelly"
+		},
+		{
+			"id": 642,
+			"user": 54656,
+			"resource": 31531,
+			"score": 1700,
+			"username": "ambato2017"
+		},
+		{
+			"id": 620,
+			"user": 54657,
+			"resource": 31531,
+			"score": 1300,
+			"username": "diana_a"
+		}
+	],
+	"result": "ok"
+};
