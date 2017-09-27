@@ -199,7 +199,7 @@
           },
           {
             "IsCustomSize": true,
-            "FontSize": 22,
+            "FontSize": 30,
             "LabelText": "",
             "FontResource": {
               "Type": "Normal",
@@ -207,7 +207,7 @@
               "Plist": ""
             },
             "HorizontalAlignmentType": "HT_Center",
-            "VerticalAlignmentType": "VT_Center",
+            "VerticalAlignmentType": "VT_TOP",
             "OutlineSize": 4,
             "OutlineColor": {},
             "OutlineEnabled": true,
@@ -224,7 +224,7 @@
             },
             "Position": {
               "X": 37.9647,
-              "Y": 12.984
+              "Y": 0
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -252,7 +252,7 @@
             "ActionTag": -1390924787,
             "Size": {
               "X": 550.0,
-              "Y": 120.0
+              "Y": 110.0
             },
             "Name": "questionLabel",
             "ctype": "TextObjectData"

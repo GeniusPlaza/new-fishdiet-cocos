@@ -17,7 +17,9 @@ var StartLayer = cc.Layer.extend({
         
         // set text
         var panelLabel = instructionsSign.getChildByName("panelText");
-        panelLabel.setText(FishDiet.data.getInstructions());
+        panelLabel.setString(FishDiet.data.getInstructions());
+        var signText = instructionsSign.getChildByName("signText");
+        signText.setString(FishDiet.questions.getCurrentQuestionTitle());
         
         var gameSign = ccs.load(resJson.gameSign).node;
         gameSign.setScale(.6, .6);
@@ -26,10 +28,13 @@ var StartLayer = cc.Layer.extend({
         
         // set text
         var title = gameSign.getChildByName("gameTitleText");
-        title.setText(FishDiet.data.getTitle());
+        title.setString(FishDiet.data.getTitle());
         var questionsCount = gameSign.getChildByName("questionsNumber");
-        questionsCount.setText(
-            ["1", FishDiet.data.getQuestions().length].join('/')
+        questionsCount.setString(
+            [
+                FishDiet.state.getCurrentQuestionIndex() + 1,
+                FishDiet.data.getQuestions().length
+            ].join('/')
         );
         
         var playBtn = ccs.load(resJson.button).node;

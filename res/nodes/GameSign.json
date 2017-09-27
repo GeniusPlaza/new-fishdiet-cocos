@@ -343,7 +343,7 @@
               "Plist": ""
             },
             "HorizontalAlignmentType": "HT_Center",
-            "VerticalAlignmentType": "VT_Center",
+            "VerticalAlignmentType": "VT_TOP",
             "OutlineSize": 4,
             "OutlineColor": {},
             "OutlineEnabled": true,
@@ -388,7 +388,7 @@
             "ActionTag": -1257294792,
             "Size": {
               "X": 700.0,
-              "Y": 250.0
+              "Y": 200.0
             },
             "Name": "gameTitleText",
             "ctype": "TextObjectData"

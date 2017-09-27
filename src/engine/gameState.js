@@ -2,7 +2,8 @@
 // Holds the state of the current playthrough
 var GameState = function () {
     var score = 0,
-        lives = MAX_LIVES;
+        lives = MAX_LIVES,
+        currentQuestionIndex = 0;
     
     this.reduceLive = function () {
         lives = lives - 1 < 0 ? 0 : lives - 1;
@@ -20,8 +21,13 @@ var GameState = function () {
         return lives;
     };
     
+    this.getCurrentQuestionIndex = function () {
+        return currentQuestionIndex;
+    };
+    
     this.resetState = function () {
         score = 0;
         lives = MAX_LIVES;
+        currentQuestionIndex = 0;
     };
 }

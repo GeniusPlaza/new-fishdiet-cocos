@@ -16,6 +16,9 @@ var GameLayer = cc.Layer.extend({
         var livesSign = ccs.load(resJson.livesSign).node;
         this.addChild(livesSign);
         livesSign.setName("livesSign");
+        livesSign.getChildByName("questionLabel").setString(
+            FishDiet.questions.getCurrentQuestionTitle()
+        );
         
         var timerSign = ccs.load(resJson.timerSign).node;
         this.addChild(timerSign);

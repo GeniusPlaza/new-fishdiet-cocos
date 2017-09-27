@@ -5,6 +5,7 @@ var FishDiet = new function () {
     
     this.data = new GameData();
     this.state = new GameState();
+    this.questions = new Questions(this.data, this.state);
     
     this.loadGame = function (gameId) {
         api.gameId = gameId;

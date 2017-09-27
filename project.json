@@ -15,14 +15,17 @@
         "src/resource.js",
         "src/example_data.js",
         
+        
+        "src/engine/utils.js",
         "src/engine/models/question.js",
         "src/engine/models/answer.js",
         "src/engine/models/highscore.js",
         
         "src/engine/config.js",
+        "src/engine/geniusPlazaAPI.js",
         "src/engine/gameData.js",
         "src/engine/gameState.js",
-        "src/engine/geniusPlazaAPI.js",
+        "src/engine/questions.js",
         "src/engine/fishDiet.js",
         
         

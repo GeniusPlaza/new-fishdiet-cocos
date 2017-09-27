@@ -482,16 +482,17 @@
           },
           {
             "IsCustomSize": true,
-            "FontSize": 50,
+            "FontSize": 45,
             "LabelText": "",
             "FontResource": {
               "Type": "Normal",
-              "Path": "fonts/Montserrat-Regular.ttf",
+              "Path": "fonts/Vanilla copy.ttf",
               "Plist": ""
             },
             "HorizontalAlignmentType": "HT_Center",
             "VerticalAlignmentType": "VT_Center",
-            "OutlineSize": 2,
+            "OutlineSize": 4,
+            "OutlineEnabled": true,
             "OutlineColor": {},
             "ShadowColor": {
               "R": 110,
@@ -512,7 +513,11 @@
               "ScaleX": 1.0,
               "ScaleY": 1.0
             },
-            "CColor": {},
+            "CColor": {
+              "R": 248,
+              "G": 140,
+              "B": 25
+            },
             "IconVisible": false,
             "PrePosition": {
               "X": 0.0,
@@ -537,16 +542,16 @@
           },
           {
             "IsCustomSize": true,
-            "FontSize": 55,
+            "FontSize": 60,
             "LabelText": "",
             "FontResource": {
               "Type": "Normal",
-              "Path": "fonts/Montserrat-Regular.ttf",
+              "Path": "fonts/Vanilla copy.ttf",
               "Plist": ""
             },
             "HorizontalAlignmentType": "HT_Center",
             "VerticalAlignmentType": "VT_Center",
-            "OutlineSize": 2,
+            "OutlineSize": 4,
             "OutlineColor": {},
             "OutlineEnabled": true,
             "ShadowColor": {
@@ -561,7 +566,7 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 4.6194,
+              "X": 12.62,
               "Y": -304.4413
             },
             "Scale": {
@@ -591,8 +596,8 @@
             "Tag": 251,
             "ActionTag": -382328511,
             "Size": {
-              "X": 900.0,
-              "Y": 150.0
+              "X": 950.0,
+              "Y": 200.0
             },
             "Name": "signText",
             "ctype": "TextObjectData"
