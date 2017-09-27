@@ -39,6 +39,8 @@ var GameScene = cc.Scene.extend({
             "game": game,
             "leaderboard": leaderboard
         }
+        
+        this.transitionTo("title");
     },
     onEnter:function () {
         this._super();
@@ -46,8 +48,10 @@ var GameScene = cc.Scene.extend({
     transitionTo: function (name) {
         cc.log("transitioning to: " + name);
         
-        // TODO: animate leaving
-        this.layers[this.currentLayer].setVisible(false);
+        if (this.currentLayer) {
+            this.layers[this.currentLayer].setVisible(false);
+        }
+        
         this.currentLayer = name;
         
         this.layers[this.currentLayer].setVisible(true);

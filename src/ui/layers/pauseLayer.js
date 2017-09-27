@@ -1,5 +1,6 @@
 
 var PauseLayer = cc.Layer.extend({
+    pausePopupPos: cc.p(960, 530),
     ctor:function () {
         //////////////////////////////
         // 1. super init first
@@ -9,26 +10,27 @@ var PauseLayer = cc.Layer.extend({
         // 2. import cocos studio files
         this.size = cc.winSize;
         
-        this.pauseBtn = ccs.load(resJson.pauseBtn).node;
-        this.pauseBtn.setPosition(cc.p(1850, 70));
-        this.addChild(this.pauseBtn, 0);
-        this.pauseBtn.getChildByName("pauseBtn").addTouchEventListener(this.onPauseBtnTouch, this);
+        var pauseBtn = ccs.load(resJson.pauseBtn).node;
+        pauseBtn.setPosition(cc.p(1850, 70));
+        this.addChild(pauseBtn, 0);
+        pauseBtn.setName("pauseBtn");
+        pauseBtn.getChildByName("pauseBtn").addTouchEventListener(this.onPauseBtnTouch, this);
         
         this.blackLayer = new BlackLayer();
         this.blackLayer.setPosition(cc.p(0, 0));
         this.blackLayer.setAnchorPoint(cc.p(.5,.5));
         this.blackLayer.setName("blackLayer");
         
-        this.pausePopup = ccs.load(resJson.pausePopup).node;
-        this.pausePopup.setPosition(cc.p(960, 530));
-        this.pausePopup.setVisible(false);
-        this.pausePopup.getChildByName("resumeBtn")
+        var pausePopup = ccs.load(resJson.pausePopup).node;
+        pausePopup.setPosition(cc.p(this.pausePopupPos.x, this.size.height * 2));
+        pausePopup.getChildByName("resumeBtn")
             .addTouchEventListener(this.onResumeBtnTouch, this);
-        this.pausePopup.getChildByName("musicSlider")
+        pausePopup.getChildByName("musicSlider")
             .addEventListener(this.onMusicSliderChange, this);
-        this.pausePopup.getChildByName("effectsSlider")
+        pausePopup.getChildByName("effectsSlider")
             .addEventListener(this.onEffectsSliderChange, this);
-        this.addChild(this.pausePopup, 2);
+        this.addChild(pausePopup, 2);
+        pausePopup.setName("pausePopup");
     },
     onPauseBtnTouch: function (sender, type) {
         if (type === ccui.Widget.TOUCH_ENDED) {
@@ -39,15 +41,16 @@ var PauseLayer = cc.Layer.extend({
             this.parent.pauseGame();
             
             // show popup
-            this.pausePopup.setVisible(true);
-            var pausePopupFinalPos = this.pausePopup.getPosition();
-            this.pausePopup.runAction(
+            var pausePopup = this.getChildByName("pausePopup");
+            
+            var pausePopupFinalPos = this.pausePopupPos;
+            pausePopup.runAction(
                 new cc.Sequence(
                     new cc.Place(
-                        cc.p(this.pausePopup.x, this.size.height * 2)
+                        cc.p(this.pausePopupPos.x, this.size.height * 2)
                     ),
                     new cc.EaseBounceOut(
-                        new cc.MoveTo(.5, pausePopupFinalPos)
+                        new cc.MoveTo(.5, this.pausePopupPos)
                     )
                 )
             );
@@ -56,13 +59,19 @@ var PauseLayer = cc.Layer.extend({
     onResumeBtnTouch: function (sender, type) {
         if (type === ccui.Widget.TOUCH_ENDED) {
             // hide pausepopup
-            this.pausePopup.setVisible(false);
+            var pausePopup = this.getChildByName("pausePopup");
             
-            // resume the game, if it's playing
-            this.parent.resumeGame();
+            pausePopup.runAction(
+                new cc.MoveTo(.2, cc.p(this.pausePopupPos.x, this.size.height * 2))
+            );
             
-            // remove black layer
-            this.removeChild(this.blackLayer);
+            this.scheduleOnce(f => {
+                // resume the game, if it's playing
+                this.parent.resumeGame();
+
+                // remove black layer
+                this.removeChild(this.blackLayer);
+            }, 0.2);
         }
     },
     onMusicSliderChange: function (sender, type) {

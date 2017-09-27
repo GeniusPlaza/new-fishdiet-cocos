@@ -1,5 +1,8 @@
 
 var GameLayer = cc.Layer.extend({
+    livesSignPos: cc.p(350, 1000),
+    timerSignPos: cc.p(960, 1000),
+    scoreSignPos: cc.p(1570, 1000),
     ctor:function () {
         //////////////////////////////
         // 1. super init first
@@ -10,29 +13,66 @@ var GameLayer = cc.Layer.extend({
         this.size = cc.winSize;
         
         // position signs
-        this.livesSign = ccs.load(resJson.livesSign).node;
-        this.livesSign.setPosition(cc.p(350, 1000));
-        this.addChild(this.livesSign);
+        var livesSign = ccs.load(resJson.livesSign).node;
+        this.addChild(livesSign);
+        livesSign.setName("livesSign");
         
-        this.timerSign = ccs.load(resJson.timerSign).node;
-        this.timerSign.setPosition(cc.p(960, 1000));
-        this.addChild(this.timerSign);
+        var timerSign = ccs.load(resJson.timerSign).node;
+        this.addChild(timerSign);
+        timerSign.setName("timerSign");
         
-        this.scoreSign = ccs.load(resJson.scoreSign).node;
-        this.scoreSign.setPosition(cc.p(1570, 1000));
-        this.addChild(this.scoreSign);
+        var scoreSign = ccs.load(resJson.scoreSign).node;
+        this.addChild(scoreSign);
+        scoreSign.setName("scoreSign");
+        
+        return true;
     },
     animateIntro: function () {
-        var livesSignFinalPos = this.livesSign.getPosition();
-        this.livesSign.setPosition(cc.p(this.livesSign.x, this.size.height + 200));
-        this.livesSign.runAction(new cc.EaseBounceOut(new cc.MoveTo(.3, livesSignFinalPos)));
+        var livesSign = this.getChildByName("livesSign");
+        var timerSign = this.getChildByName("timerSign");
+        var scoreSign = this.getChildByName("scoreSign");
         
-        var timerSignFinalPos = this.timerSign.getPosition();
-        this.timerSign.setPosition(cc.p(this.timerSign.x, this.size.height + 500));
-        this.timerSign.runAction(new cc.EaseBounceOut(new cc.MoveTo(.5, timerSignFinalPos)));
+        livesSign.setPosition(cc.p(this.livesSignPos.x, this.size.height + 200));
+        livesSign.runAction(
+            new cc.EaseBounceOut(new cc.MoveTo(.3, this.livesSignPos))
+        );
         
-        var scoreSignFinalPos = this.scoreSign.getPosition();
-        this.scoreSign.setPosition(cc.p(this.scoreSign.x, this.size.height + 500));
-        this.scoreSign.runAction(new cc.EaseBounceOut(new cc.MoveTo(.7, scoreSignFinalPos)));
+        timerSign.setPosition(cc.p(this.timerSignPos.x, this.size.height + 500));
+        timerSign.runAction(
+            new cc.EaseBounceOut(new cc.MoveTo(.5, this.timerSignPos))
+        );
+        
+        scoreSign.setPosition(cc.p(this.scoreSignPos.x, this.size.height + 500));
+        scoreSign.runAction(
+            new cc.EaseBounceOut(new cc.MoveTo(.7, this.scoreSignPos))
+        );
+    },
+    animateOutro: function () {
+        var livesSign = this.getChildByName("livesSign");
+        var timerSign = this.getChildByName("timerSign");
+        var scoreSign = this.getChildByName("scoreSign");
+        
+        livesSign.runAction(
+            new cc.EaseBackIn(
+                new cc.MoveTo(.2, cc.p(this.livesSignPos.x, this.size.height + 200))
+            )
+        );
+        timerSign.runAction(
+            new cc.EaseBackIn(
+                new cc.MoveTo(.2, cc.p(this.timerSignPos.x, this.size.height + 500))
+            )
+        );
+        scoreSign.runAction(
+            new cc.EaseBackIn(
+                new cc.MoveTo(.2, cc.p(this.scoreSignPos.x, this.size.height + 500))
+            )
+        );
+    },
+    onGameEnded: function () {
+        this.animateOutro();
+
+        this.scheduleOnce(f => {
+            this.parent.transitionTo("start")
+        }, .2);
     }
 });

@@ -1,5 +1,6 @@
 
 var StartLayer = cc.Layer.extend({
+    playBtnPos: cc.p(967, 220),
     ctor:function () {
         //////////////////////////////
         // 1. super init first
@@ -9,27 +10,34 @@ var StartLayer = cc.Layer.extend({
         // 2. import cocos studio files
         this.size = cc.winSize;
         
-        this.instructionsSign = ccs.load(resJson.instructionsSign).node;
-        this.instructionsSign.setScale(.85, .70);
-        this.instructionsSign.setPosition(cc.p(1250, 650));
-        this.addChild(this.instructionsSign);
+        var instructionsSign = ccs.load(resJson.instructionsSign).node;
+        instructionsSign.setScale(.85, .70);
+        this.addChild(instructionsSign);
+        instructionsSign.setName("instructionsSign");
         
-        this.gameSign = ccs.load(resJson.gameSign).node;
-        this.gameSign.setScale(.6, .6);
-        this.gameSign.setPosition(cc.p(370, 740));
-        this.addChild(this.gameSign);
+        var gameSign = ccs.load(resJson.gameSign).node;
+        gameSign.setScale(.6, .6);
+        gameSign.setName("gameSign");
+        this.addChild(gameSign);
         
-        this.playBtn = ccs.load(resJson.button).node;
-        this.playBtn.setPosition(cc.p(967, 220));
-        this.addChild(this.playBtn);
+        var playBtn = ccs.load(resJson.button).node;
+        playBtn.setName("playBtn");
+        this.addChild(playBtn);
+        
+        return true;
     },
     animateIntro: function () {
-        var rootNode = this.getChildByName("rootNode");
+        var instructionsSign = this.getChildByName("instructionsSign");
+        var gameSign = this.getChildByName("gameSign");
+        var playBtn = this.getChildByName("playBtn");
         
-        var instSignFinalPos = this.instructionsSign.getPosition();
-        this.instructionsSign.setPosition(cc.p(this.instructionsSign.x, this.size.height + 500));
-        this.instructionsSign.runAction(new cc.EaseBounceOut(new cc.MoveTo(.8, instSignFinalPos)));
-        this.instructionsSign.runAction(
+        instructionsSign.setPosition(cc.p(1250, 650));
+        gameSign.setPosition(cc.p(370, 740));
+        
+        var instSignFinalPos = instructionsSign.getPosition();
+        instructionsSign.setPosition(cc.p(instructionsSign.x, this.size.height + 500));
+        instructionsSign.runAction(new cc.EaseBounceOut(new cc.MoveTo(.8, instSignFinalPos)));
+        instructionsSign.runAction(
             new cc.RepeatForever(
                 new cc.Sequence(
                     new cc.MoveBy(5, cc.p(0, 25)),
@@ -38,10 +46,10 @@ var StartLayer = cc.Layer.extend({
             )
         );
         
-        var gameSignFinalPos = this.gameSign.getPosition();
-        this.gameSign.setPosition(cc.p(this.gameSign.x, this.size.height + 500));
-        this.gameSign.runAction(new cc.EaseBounceOut(new cc.MoveTo(.8, gameSignFinalPos)));
-        this.gameSign.runAction(
+        var gameSignFinalPos = gameSign.getPosition();
+        gameSign.setPosition(cc.p(gameSign.x, this.size.height + 500));
+        gameSign.runAction(new cc.EaseBounceOut(new cc.MoveTo(.8, gameSignFinalPos)));
+        gameSign.runAction(
             new cc.RepeatForever(
                 new cc.Sequence(
                     new cc.MoveBy(5, cc.p(0, 25)),
@@ -51,23 +59,49 @@ var StartLayer = cc.Layer.extend({
         );
         
         // animate btn
-        var playFinalPos = this.playBtn.getPosition();
-        this.playBtn.setPosition(
-            cc.p(this.size.width / 2, -this.playBtn.getChildByName("playBtn").height)
+        playBtn.setPosition(
+            cc.p(this.size.width / 2, -playBtn.getChildByName("playBtn").height)
         );
-        this.playBtn.runAction(
+        playBtn.runAction(
             new cc.Sequence(
                 new cc.DelayTime(.5),
-                new cc.EaseBounceOut(new cc.MoveTo(.8, playFinalPos))
+                new cc.EaseBounceOut(new cc.MoveTo(.8, this.playBtnPos))
             )
         );
-        this.playBtn
+        playBtn
             .getChildByName("playBtn")
             .addTouchEventListener(this.onPlayBtnTouch, this);
     },
+    animateOutro: function () {
+        var instructionsSign = this.getChildByName("instructionsSign");
+        var gameSign = this.getChildByName("gameSign");
+        var playBtn = this.getChildByName("playBtn");
+        
+        instructionsSign.stopAllActions();
+        instructionsSign.runAction(
+            new cc.EaseBackIn(
+                new cc.MoveTo(.2, cc.p(instructionsSign.x, this.size.height + 500))
+            )
+        );
+        
+        gameSign.stopAllActions();
+        gameSign.runAction(
+            new cc.EaseBackIn(
+                new cc.MoveTo(.2, cc.p(gameSign.x, this.size.height + 500))
+            )
+        );
+        
+        playBtn.runAction(
+            new cc.MoveTo(.2, cc.p(this.size.width / 2, -playBtn.height))
+        );
+    },
     onPlayBtnTouch: function (sender, type) {
         if (type === ccui.Widget.TOUCH_ENDED) {
-            this.parent.transitionTo("leaderboard");
+            this.animateOutro();
+            
+            this.scheduleOnce(f => {
+                this.parent.transitionTo("game")
+            }, .2);
         }
     }
 });

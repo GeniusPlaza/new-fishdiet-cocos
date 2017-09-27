@@ -1,6 +1,8 @@
 
 var TitleLayer = cc.Layer.extend({
-    sprite:null,
+    signPos: cc.p(960.00, 635.00),
+    bluefishPos: cc.p(0,0),
+    playBtnPos: cc.p(0,0),
     ctor:function () {
         //////////////////////////////
         // 1. super init first
@@ -8,15 +10,31 @@ var TitleLayer = cc.Layer.extend({
 
         /////////////////////////////
         // 2. import cocos studio files
-        var size = cc.winSize;
+        this.size = cc.winSize;
         
         var rootNode = ccs.load(resJson.titleLayer).node;
         this.addChild(rootNode);
+        rootNode.setName("rootNode");
                 
         // add title sign
         var sign = ccs.load(resJson.titleSign).node;
-        var signFinalPos = cc.p(960.00, 635.00);
-        sign.setPosition(cc.p(size.width / 2, size.height + 200));
+        this.addChild(sign, -1);
+        sign.setName("sign");
+        
+        var playBtn = rootNode.getChildByName("playBtn");
+        this.playBtnPos = playBtn.getPosition();
+        
+        var blueFish = rootNode.getChildByName("blueFish");
+        this.bluefishPos = blueFish.getPosition();
+        
+        return true;
+    },
+    animateIntro: function () {
+        var rootNode = this.getChildByName("rootNode");
+        var sign = this.getChildByName("sign");
+        
+        var signFinalPos = this.signPos;
+        sign.setPosition(cc.p(this.size.width / 2, this.size.height + 200));
         sign.runAction(new cc.EaseBounceOut(new cc.MoveTo(.6, signFinalPos)));
         sign.runAction(
             new cc.RepeatForever(
@@ -27,12 +45,10 @@ var TitleLayer = cc.Layer.extend({
             )
         );
         
-        rootNode.addChild(sign, -1);
-        
         // position blue fish and animate
         var blueFish = rootNode.getChildByName("blueFish");
-        var blueFinalPos = blueFish.getPosition();
-        blueFish.setPosition(cc.p(size.width + blueFish.width, size.height / 2));
+        var blueFinalPos = this.bluefishPos;
+        blueFish.setPosition(cc.p(this.size.width + blueFish.width, this.size.height / 2));
         blueFish.runAction(
             new cc.Sequence(
                 new cc.DelayTime(.4),
@@ -57,8 +73,8 @@ var TitleLayer = cc.Layer.extend({
         
         // animate btn
         var playBtn = rootNode.getChildByName("playBtn");
-        var playFinalPos = playBtn.getPosition();
-        playBtn.setPosition(cc.p(size.width / 2, -playBtn.height));
+        var playFinalPos = this.playBtnPos;
+        playBtn.setPosition(cc.p(this.size.width / 2, -playBtn.height));
         playBtn.runAction(
             new cc.Sequence(
                 new cc.DelayTime(.5),
@@ -66,12 +82,38 @@ var TitleLayer = cc.Layer.extend({
             )
         );
         playBtn.addTouchEventListener(this.onPlayBtnTouch, this);
-                
-        return true;
+    },
+    animateOutro: function () {
+        var rootNode = this.getChildByName("rootNode");
+        var sign = this.getChildByName("sign");
+        
+        sign.stopAllActions();
+        sign.runAction(
+            new cc.EaseBackIn(
+                new cc.MoveTo(.2, cc.p(this.size.width / 2, this.size.height + 200))
+            )
+        );
+        
+        var blueFish = rootNode.getChildByName("blueFish");
+        blueFish.stopAllActions();
+        blueFish.runAction(
+            new cc.EaseBackIn(
+                new cc.MoveTo(.2, cc.p(this.size.width + blueFish.width, this.size.height / 2))
+            )
+        );
+        
+        var playBtn = rootNode.getChildByName("playBtn");
+        playBtn.runAction(
+            new cc.MoveTo(.2, cc.p(this.size.width / 2, -playBtn.height))
+        );
     },
     onPlayBtnTouch: function (sender, type) {
         if (type === ccui.Widget.TOUCH_ENDED) {
-            this.parent.transitionTo("instructions");
+            this.animateOutro();
+            
+            this.scheduleOnce(f => {
+                this.parent.transitionTo("instructions")
+            }, .2);
         }
     }
 });

@@ -1,5 +1,7 @@
 
 var LeaderboardLayer = cc.Layer.extend({
+    leaderboardPos: cc.p(960, 540),
+    reflectionPanelPos: cc.p(960, 600),
     ctor:function () {
         //////////////////////////////
         // 1. super init first
@@ -9,83 +11,117 @@ var LeaderboardLayer = cc.Layer.extend({
         // 2. import cocos studio files
         this.size = cc.winSize;
         
-        this.leaderboard = ccs.load(resJson.leaderboard).node;
-        this.leaderboard.setPosition(cc.p(960, 540));
-        this.leaderboard.setScale(.90);
-        this.addChild(this.leaderboard);
-        this.leaderboard.getChildByName("score").setFontSize(105);
+        var leaderboard = ccs.load(resJson.leaderboard).node;
+        leaderboard.setPosition(
+            cc.p(this.size.width * 1.5, this.leaderboardPos.y)
+        );
+        leaderboard.setScale(.90);
+        this.addChild(leaderboard);
+        leaderboard.setName("leaderboard");
+        leaderboard.getChildByName("score").setFontSize(105);
         
-        this.leaderboard.getChildByName("highFiveBtn")
+        leaderboard.getChildByName("highFiveBtn")
             .addTouchEventListener(this.onHighFiveUpBtnTouch, this);
-        this.leaderboard.getChildByName("highFiveBtnDown")
+        leaderboard.getChildByName("highFiveBtnDown")
             .addTouchEventListener(this.onHighFiveDownBtnTouch, this);
-        this.leaderboard.getChildByName("reflectionBtn")
+        leaderboard.getChildByName("reflectionBtn")
             .addTouchEventListener(this.onReflectionBtnTouch, this);
-        this.leaderboard.getChildByName("replayBtn")
+        leaderboard.getChildByName("replayBtn")
             .addTouchEventListener(this.onReplayBtnTouch, this);
         
-        this.reflectionPanel = ccs.load(resJson.reflectionPanel).node;
-        this.reflectionPanel.setPosition(cc.p(960, 600));
-        this.reflectionPanel.setScale(.85, .90);
-        this.reflectionPanel.setVisible(false);
-        this.addChild(this.reflectionPanel);
+        var reflectionPanel = ccs.load(resJson.reflectionPanel).node;
+        reflectionPanel.setScale(.85, .90);
+        reflectionPanel.setVisible(false);
+        reflectionPanel.setName("reflectionPanel");
+        this.addChild(reflectionPanel);
         
-        this.reflectionPanel.getChildByName("submitBtn")
+        reflectionPanel.getChildByName("submitBtn")
             .addTouchEventListener(this.onSubmitBtnTouch, this);
-        this.reflectionPanel.getChildByName("reflectionsField").setPlaceHolderColor(cc.color.WHITE);
+        reflectionPanel.getChildByName("reflectionsField").setPlaceHolderColor(cc.color.WHITE);
     },
     animateIntro: function () {
-        var leaderboardFinalPos = this.leaderboard.getPosition();
-        this.leaderboard.setPosition(
-            cc.p(this.size.width * 1.5, this.leaderboard.y)
+        var leaderboard = this.getChildByName("leaderboard");
+        
+        leaderboard.setPosition(
+            cc.p(this.size.width * 1.5, this.leaderboardPos.y)
         );
-        this.leaderboard.runAction(
-            new cc.EaseBackOut(new cc.MoveTo(.5, leaderboardFinalPos))
+        leaderboard.runAction(
+            new cc.EaseBackOut(new cc.MoveTo(.5, this.leaderboardPos))
+        );
+    },
+    animateOutro: function () {
+        var leaderboard = this.getChildByName("leaderboard");
+        
+        leaderboard.runAction(
+            new cc.EaseBackIn(
+                new cc.MoveTo(.2, cc.p(this.size.width * 1.5, this.leaderboardPos.y))
+            )
         );
     },
     onHighFiveUpBtnTouch: function (sender, type) {
         if (type === ccui.Widget.TOUCH_ENDED) {
-            this.leaderboard.getChildByName("highFiveBtn")
+            var leaderboard = this.getChildByName("leaderboard");
+            
+            leaderboard.getChildByName("highFiveBtn")
                 .setVisible(false);
-            this.leaderboard.getChildByName("highFiveBtnDown")
+            leaderboard.getChildByName("highFiveBtnDown")
                 .setVisible(true);
         }
     },
     onHighFiveDownBtnTouch: function (sender, type) {
         if (type === ccui.Widget.TOUCH_ENDED) {
-            this.leaderboard.getChildByName("highFiveBtn")
+            var leaderboard = this.getChildByName("leaderboard");
+            
+            leaderboard.getChildByName("highFiveBtn")
                 .setVisible(true);
-            this.leaderboard.getChildByName("highFiveBtnDown")
+            leaderboard.getChildByName("highFiveBtnDown")
                 .setVisible(false);
         }
     },
     onReflectionBtnTouch: function (sender, type) {
         if (type === ccui.Widget.TOUCH_ENDED) {
-            this.leaderboard.setVisible(false);
-            this.reflectionPanel.setVisible(true);
+            var leaderboard = this.getChildByName("leaderboard");
+            var reflectionPanel = this.getChildByName("reflectionPanel");
             
-            var reflectionPanelFinalPos = this.reflectionPanel.getPosition();
-            this.reflectionPanel.setPosition(
-                cc.p(this.reflectionPanel.x, this.size.height * 1.5)
+            leaderboard.setVisible(false);
+            reflectionPanel.setVisible(true);
+            
+            reflectionPanel.setPosition(
+                cc.p(this.reflectionPanelPos.x, this.size.height * 1.5)
             );
-            this.reflectionPanel.runAction(
+            reflectionPanel.runAction(
                 new cc.EaseBounceOut(
-                    new cc.MoveTo(.5, reflectionPanelFinalPos)
+                    new cc.MoveTo(.5, this.reflectionPanelPos)
                 )
             );
         }
     },
     onSubmitBtnTouch: function (sender, type) {
         if (type === ccui.Widget.TOUCH_ENDED) {
-            this.leaderboard.setVisible(true);
-            this.reflectionPanel.setVisible(false);
+            var leaderboard = this.getChildByName("leaderboard");
+            var reflectionPanel = this.getChildByName("reflectionPanel");
             
-            this.animateIntro();
+            reflectionPanel.runAction(
+                new cc.EaseBackIn(
+                    new cc.MoveTo(.2, cc.p(this.reflectionPanelPos.x, this.size.height * 1.5))
+                )
+            );
+            
+            this.scheduleOnce(f => {
+                reflectionPanel.setVisible(false);
+                leaderboard.setVisible(true);
+                
+                this.animateIntro();
+            }, .2)
         }
     },
     onReplayBtnTouch: function (sender, type) {
         if (type === ccui.Widget.TOUCH_ENDED) {
-            this.parent.transitionTo("start");
+            this.animateOutro();
+
+            this.scheduleOnce(f => {
+                this.parent.transitionTo("start")
+            }, .2);
         }
     }
 });
