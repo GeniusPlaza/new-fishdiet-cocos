@@ -48,6 +48,7 @@ var TitleLayer = cc.Layer.extend({
         // position blue fish and animate
         var blueFish = rootNode.getChildByName("blueFish");
         var blueFinalPos = this.bluefishPos;
+        blueFish.setFlippedX(false);
         blueFish.setPosition(cc.p(this.size.width + blueFish.width, this.size.height / 2));
         blueFish.runAction(
             new cc.Sequence(
@@ -96,6 +97,7 @@ var TitleLayer = cc.Layer.extend({
         
         var blueFish = rootNode.getChildByName("blueFish");
         blueFish.stopAllActions();
+        blueFish.setFlippedX(true);
         blueFish.runAction(
             new cc.EaseBackIn(
                 new cc.MoveTo(.2, cc.p(this.size.width + blueFish.width, this.size.height / 2))

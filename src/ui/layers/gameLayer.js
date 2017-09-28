@@ -28,6 +28,12 @@ var GameLayer = cc.Layer.extend({
         this.addChild(scoreSign);
         scoreSign.setName("scoreSign");
         
+        var rootNode = ccs.load(resJson.enemyFish);
+        
+        /////////////////////////////
+        // 3. Create a fish pool
+        var fishPool = new FishPool();
+        
         return true;
     },
     animateIntro: function () {

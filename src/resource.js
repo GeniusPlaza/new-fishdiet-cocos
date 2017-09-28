@@ -25,7 +25,7 @@ var resImages = {
 var resJson = {
     button: "res/nodes/Button.json",
     pauseBtn: "res/nodes/PauseBtn.json",
-//    enemyFish: "res/nodes/EnemyFish.json",
+    enemyFish: "res/nodes/EnemyFish.json",
     gameSign: "res/nodes/GameSign.json",
     instructionsSign: "res/nodes/InstructionsSign.json",
     leaderboard: "res/nodes/Leaderboard.json",

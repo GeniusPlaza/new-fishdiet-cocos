@@ -38,6 +38,10 @@
         "src/ui/layers/gameLayer.js",
         "src/ui/layers/leaderboardLayer.js",
         
+        "src/ui/nodes/enemyFish.js",
+        "src/ui/nodes/fishBuilder.js",
+        "src/ui/nodes/fishPool.js",
+        
         "src/ui/gameScene.js"
     ]
 }
