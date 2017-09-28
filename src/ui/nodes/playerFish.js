@@ -6,7 +6,6 @@ var PlayerFish = cc.Sprite.extend({
         this._super(resImages.playerFish);
         
         this.setScale(this.MAX_GROWTH);
-        
         cc.spriteFrameCache.addSpriteFrames(resSpriteSheet.playerFish_plist);
         var fishTexture = cc.textureCache.addImage(resSpriteSheet.playerFish_png),
             fishImages  = cc.SpriteBatchNode.create(fishTexture);
@@ -59,7 +58,12 @@ var PlayerFish = cc.Sprite.extend({
                         else
                             this.setFlippedX(false);
                         
-                        this.setPosition(newPos);
+                        var insideLRBoundaries = touch.getLocationX() < cc.winSize.width -this.width / 4 && touch.getLocationX() > this.width / 4;
+                        var insideTBBoundaries = touch.getLocationY() < cc.winSize.height -this.height / 4 && touch.getLocationY() > this.height / 4;
+                        
+                        if (insideLRBoundaries && insideTBBoundaries) {
+                            this.setPosition(newPos);
+                        }
                     }
                 },
                 

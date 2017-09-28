@@ -7,8 +7,9 @@ var GameLayer = cc.Layer.extend({
     scoreSignPos: cc.p(1570, 1000),
     // the whole width, but only 800 of height from
     // point 100 in y
-    gameArea: {x: 0, y: 100, width: cc.winSize.width, height: 800},
+    gameHeight: {y: 100, height: 800},
     gameStarted: false,
+    fishList: [],
     ctor:function () {
         //////////////////////////////
         // 1. super init first
@@ -46,7 +47,20 @@ var GameLayer = cc.Layer.extend({
         this.playerFish.setPosition(cc.p(this.size.width / 2, this.size.height / 2));
         this.addChild(this.playerFish);
         
+        this.scheduleUpdate();
+        
         return true;
+    },
+    update: function (dt) {
+        var playerFishBox = this.playerFish.getBoundingBox();
+        
+        this.fishList.forEach(f => {
+            var fBox = f.getBoundingBox();
+            
+            if (cc.rectIntersectsRect(playerFishBox, fBox)) {
+                cc.log("eating!");
+            }
+        })
     },
     countDown: function () {
         var countDown = 3;
@@ -78,10 +92,11 @@ var GameLayer = cc.Layer.extend({
         
         this.schedule(this.createFish, 4, cc.REPEAT_FOREVER, 3);
     },
-    createFish: function () {
+    createFish: function (dt) {
       if (this.gameStarted) {
           var newFish = this.fishPool.createFish();
           this.addChild(newFish, 2);
+          this.fishList.push(newFish);
           
           // 1 left, 2 right
           var startingSide = Utils.randomNumber(1, 3); 
@@ -93,7 +108,7 @@ var GameLayer = cc.Layer.extend({
           var startX = startingSide == 1 ? 
               -newFish.width / 2:
                this.size.width + newFish.width;
-          var startY = Utils.randomNumber(this.gameArea.y, this.gameArea.height);
+          var startY = Utils.randomNumber(this.gameHeight.y, this.gameHeight.height);
           
           newFish.setPosition(cc.p(startX, startY));
           
@@ -105,6 +120,10 @@ var GameLayer = cc.Layer.extend({
           newFish.runAction(
               new cc.Sequence(
                   new cc.MoveTo(speed, cc.p(endX, newFish.y)),
+                  new cc.CallFunc(f => {
+                      var index = this.fishList.indexOf(newFish);
+                      this.fishList.splice(index, 1);
+                  }),
                   new cc.RemoveSelf()
               )
           );
