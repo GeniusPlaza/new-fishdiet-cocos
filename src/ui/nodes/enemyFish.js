@@ -1,3 +1,4 @@
+
 var EnemyFish = cc.Sprite.extend({
     ctor: function (texture) {
         this._super(texture);
@@ -19,6 +20,8 @@ var EnemyFish = cc.Sprite.extend({
         text.x += 30;
         text.setName("text");
         this.addChild(text, 3);
+        
+        
         
         return true;
     },
@@ -61,11 +64,8 @@ var EnemyFish = cc.Sprite.extend({
             );
             this.getChildByName("text").setHorizontalAlignment(cc.TEXT_ALIGNMENT_LEFT);
         }
-        
-        this.runAction(this.animation);
     },
     setAnimation: function (animation) {
-        this.animation = animation;
         this.runAction(animation);
     }
 })

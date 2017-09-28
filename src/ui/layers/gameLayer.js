@@ -39,7 +39,13 @@ var GameLayer = cc.Layer.extend({
         /////////////////////////////
         // 3. Create a fish pool
         this.fishPool = new FishPool();
-                
+        
+        /////////////////////////////
+        // 4. Add player fish
+        this.playerFish = new PlayerFish();
+        this.playerFish.setPosition(cc.p(this.size.width / 2, this.size.height / 2));
+        this.addChild(this.playerFish);
+        
         return true;
     },
     countDown: function () {
@@ -85,7 +91,7 @@ var GameLayer = cc.Layer.extend({
           
           // position fish
           var startX = startingSide == 1 ? 
-              -newFish.width:
+              -newFish.width / 2:
                this.size.width + newFish.width;
           var startY = Utils.randomNumber(this.gameArea.y, this.gameArea.height);
           
