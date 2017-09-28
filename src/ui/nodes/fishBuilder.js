@@ -70,20 +70,10 @@ var FishBuilder = cc.Node.extend({
     },
     buildFish: function (fishType) {
         // make object with helper functions
-        this.fish = ccs.load(resJson.enemyFish).node;
-        this.fish.setString = function (text) {
-            this.getChildByName("text").setString(text);
-        };
-        this.fish.setTexture = function (texture) {
-            this.getChildByName("sprite").setTexture(texture);
-        };
-        this.fish.setAnimation = function (animation) {
-            this.getChildByName("sprite").runAction(animation);
-        }
-        
-        // set texture and animation
-        this.fish.setTexture(FISH_RESOURCES[fishType].sprite);
-        this.fish.setAnimation(this.animations[fishType]);
+        this.fish = new EnemyFish(FISH_RESOURCES[fishType].sprite);
+        this.fish.setAnimation(
+            this.animations[fishType].clone()
+        );
     },
     buildText: function (text) {        
         if (this.fish) {

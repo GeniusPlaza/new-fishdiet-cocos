@@ -17,12 +17,12 @@ var Question = function (questionData) {
         getAudioInstructions: function () { return audioInstructions; },
         getAnswersText: function () {
             return answers.map(function (a) {
-                return a.text;
+                return a.getText();
             });
         },
         checkAnswerCorrect: function (answerText) {
             return answers.find(function (a) {
-                return a.text === answerText;
+                return a.getText() === answerText;
             }).isCorrect;
         }
     }

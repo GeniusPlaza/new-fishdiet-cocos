@@ -25,21 +25,22 @@ var FishPool = cc.Node.extend({
         
         Utils.shuffle(availableFishes);
         
+        this.acquire = function () {
+            var reusable = availableFishes.pop();
+            return reusable;
+        },
+        this.release = function (reusable) {
+            availableFishes.push(reusable);
+            Utils.shuffle(availableFishes);
+        },
+        this.update = function () {
+            availableFishes.forEach(function (fish) {
+                fish.setString(
+                    FishDiet.questions.getRandomAnswerText()
+                );
+            })
+        }
+        
         return true;
-    },
-    acquire: function () {
-        var reusable = availableFishes.pop();
-        return reusable;
-    },
-    release: function (reusable) {
-        availableFishes.push(reusable);
-        Utils.shuffle(availableFishes);
-    },
-    update: function () {
-        availableFishes.forEach(function (fish) {
-            fish.setString(
-                FishDiet.questions.getRandomAnswerText()
-            );
-        })
-    }
+    }    
 });

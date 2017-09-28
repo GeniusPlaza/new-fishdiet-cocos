@@ -19,13 +19,13 @@ var resImages = {
     pinkFish: "res/sprites/fishes/pinkFish/pinkfish0001.png",
     playerFish: "res/sprites/fishes/playerFish/playerfish0001.png",
     sliderHanlder: "res/sprites/ui/slider_handler2.png",
-    ropeSlider: "res/sprites/ui/ropeSlider.png"
+    ropeSlider: "res/sprites/ui/ropeSlider.png",
+    bubble: "res/sprites/bubbles/bubble2.png"
 };
 
 var resJson = {
     button: "res/nodes/Button.json",
     pauseBtn: "res/nodes/PauseBtn.json",
-    enemyFish: "res/nodes/EnemyFish.json",
     gameSign: "res/nodes/GameSign.json",
     instructionsSign: "res/nodes/InstructionsSign.json",
     leaderboard: "res/nodes/Leaderboard.json",
@@ -39,7 +39,15 @@ var resJson = {
     titleLayer: "res/layers/TitleLayer.json",
     instructionsLayer: "res/layers/InstructionLayer.json",
     backgroundLayer: "res/layers/BackgroundLayer.json"
-}
+};
+
+var resFonts = {
+    vanilla: {type:"font", name: "Vanilla copy", srcs: ["res/fonts/Vanilla copy.ttf"]}
+};
+
+var resExtra = {
+    textColor: new cc.Color(248, 140, 25)
+};
 
 var g_resources = [];
 for (var i in resSpriteSheet) {
@@ -54,4 +62,18 @@ for (var i in resImages) {
     g_resources.push(resImages[i]);
 }
 
-// color F88C19FF
+for (var i in resFonts) {
+    g_resources.push(resFonts[i]);
+}
+
+/*
+* Return font based on whether game is run on web or native device
+* @param {string} name of the font
+*/
+var _b_getFontName = function(resource) {
+    if(cc.sys.isNative) {
+        return resource.srcs[0];
+    } else {
+        return resource.name;
+    }
+}
