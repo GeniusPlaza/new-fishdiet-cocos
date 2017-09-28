@@ -9,24 +9,24 @@ var GameScene = cc.Scene.extend({
         this.addChild(bg, -1);
         
         var title = new TitleLayer();
-        this.addChild(title, 0);
+        this.addChild(title, 9);
         title.setName("title");
         this.currentLayer = "title";
         
         var instructions = new InstructionsLayer();
-        this.addChild(instructions, 0);
+        this.addChild(instructions, 8);
         instructions.setVisible(false);
         
         var start = new StartLayer();
-        this.addChild(start, 0);
+        this.addChild(start, 7);
         start.setVisible(false);
         
         var game = new GameLayer();
-        this.addChild(game, 0);
+        this.addChild(game, 6);
         game.setVisible(false);
         
         var leaderboard = new LeaderboardLayer();
-        this.addChild(leaderboard, 0);
+        this.addChild(leaderboard, 5);
         leaderboard.setVisible(false);
         
         var hud = new PauseLayer();

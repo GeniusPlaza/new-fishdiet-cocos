@@ -41,7 +41,7 @@
         "src/ui/nodes/playerFish.js",
         "src/ui/nodes/enemyFish.js",
         "src/ui/nodes/fishBuilder.js",
-        "src/ui/nodes/fishPool.js",
+        "src/ui/nodes/fishCreator.js",
         
         "src/ui/gameScene.js"
     ]

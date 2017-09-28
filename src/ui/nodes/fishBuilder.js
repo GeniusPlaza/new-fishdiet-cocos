@@ -71,9 +71,7 @@ var FishBuilder = cc.Node.extend({
     buildFish: function (fishType) {
         // make object with helper functions
         this.fish = new EnemyFish(FISH_RESOURCES[fishType].sprite);
-        this.fish.setAnimation(
-            this.animations[fishType].clone()
-        );
+        this.fish.runAction(this.animations[fishType].clone());
     },
     buildText: function (text) {        
         if (this.fish) {

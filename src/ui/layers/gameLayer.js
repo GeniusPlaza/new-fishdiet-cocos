@@ -1,5 +1,5 @@
 var MIN_VELOCITY = 30;
-var MAX_VELOCITY = 20;
+var MAX_VELOCITY = 15;
 
 var GameLayer = cc.Layer.extend({
     livesSignPos: cc.p(350, 1000),
@@ -38,7 +38,7 @@ var GameLayer = cc.Layer.extend({
         
         /////////////////////////////
         // 3. Create a fish pool
-        this.fishPool = new FishPool();
+        this.fishPool = new FishCreator();
         
         /////////////////////////////
         // 4. Add player fish
@@ -76,11 +76,11 @@ var GameLayer = cc.Layer.extend({
         
         this.gameStarted = true;
         
-        this.schedule(this.createFish, 3, cc.REPEAT_FOREVER, 3);
+        this.schedule(this.createFish, 4, cc.REPEAT_FOREVER, 3);
     },
     createFish: function () {
       if (this.gameStarted) {
-          var newFish = this.fishPool.acquire();
+          var newFish = this.fishPool.createFish();
           this.addChild(newFish, 2);
           
           // 1 left, 2 right
@@ -105,11 +105,7 @@ var GameLayer = cc.Layer.extend({
           newFish.runAction(
               new cc.Sequence(
                   new cc.MoveTo(speed, cc.p(endX, newFish.y)),
-                  new cc.CallFunc(r => {
-                      this.fishPool.release(newFish);
-                      newFish.flip(false);
-                      this.removeChild(newFish);
-                  })
+                  new cc.RemoveSelf()
               )
           );
       }
