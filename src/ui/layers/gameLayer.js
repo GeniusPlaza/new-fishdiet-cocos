@@ -1,5 +1,5 @@
 var MIN_VELOCITY = 30;
-var MAX_VELOCITY = 10;
+var MAX_VELOCITY = 20;
 
 var GameLayer = cc.Layer.extend({
     livesSignPos: cc.p(350, 1000),
@@ -39,15 +39,38 @@ var GameLayer = cc.Layer.extend({
         /////////////////////////////
         // 3. Create a fish pool
         this.fishPool = new FishPool();
-        
-        this.countDown();
-        
+                
         return true;
     },
     countDown: function () {
+        var countDown = 3;
+        var countDownLabel = new cc.LabelTTF(countDown.toFixed(0), _b_getFontName(resFonts.vanilla), 400);
+        countDownLabel.setFontFillColor(resExtra.textColor);
+        countDownLabel.enableStroke(cc.color.WHITE, 5);
+        countDownLabel.setPosition(
+            cc.p(this.size.width / 2, this.size.height / 2)
+        );
+        this.addChild(countDownLabel, 3);
+        
+        this.schedule(f => {
+            countDown -= 1;
+            
+            if (countDown > 0) {
+                countDownLabel.setString(countDown.toFixed(0));
+            } else {
+                countDownLabel.setString("Go!");
+                countDownLabel.runAction(
+                    new cc.Sequence(
+                        new cc.DelayTime(.5),
+                        new cc.RemoveSelf()
+                    )
+                )
+            }
+        }, 1, 4, 1);
+        
         this.gameStarted = true;
         
-        this.schedule(this.createFish, 2);
+        this.schedule(this.createFish, 3, cc.REPEAT_FOREVER, 3);
     },
     createFish: function () {
       if (this.gameStarted) {
@@ -62,7 +85,7 @@ var GameLayer = cc.Layer.extend({
           
           // position fish
           var startX = startingSide == 1 ? 
-              -newFish.width / 2 :
+              -newFish.width:
                this.size.width + newFish.width;
           var startY = Utils.randomNumber(this.gameArea.y, this.gameArea.height);
           
@@ -71,7 +94,7 @@ var GameLayer = cc.Layer.extend({
           // animate movement
           var endX = startingSide == 1 ? 
               this.size.width + newFish.width :
-              -newFish.width / 2;
+              -newFish.width;
           var speed = Utils.randomNumber(MAX_VELOCITY, MIN_VELOCITY + 1);
           newFish.runAction(
               new cc.Sequence(
@@ -104,6 +127,8 @@ var GameLayer = cc.Layer.extend({
         scoreSign.runAction(
             new cc.EaseBounceOut(new cc.MoveTo(.7, this.scoreSignPos))
         );
+        
+        this.scheduleOnce(this.countDown, .7);
     },
     animateOutro: function () {
         var livesSign = this.getChildByName("livesSign");
