@@ -53,12 +53,22 @@ var GameLayer = cc.Layer.extend({
     },
     update: function (dt) {
         var playerFishBox = this.playerFish.getBoundingBox();
+        // fixing for more realistic collision
+        playerFishBox.width -= 30;
+        playerFishBox.height -= 20;
         
         this.fishList.forEach(f => {
             var fBox = f.getBoundingBox();
+            // fixing for more realistic collision
+            fBox.width -= FISH_BOX_FISHING[f.type].width;
+            fBox.height -= FISH_BOX_FISHING[f.type].height;
             
             if (cc.rectIntersectsRect(playerFishBox, fBox)) {
-                cc.log("eating!");
+                // remove fish from layer and list because it has been eaten
+                cc.log(playerFishBox);
+                cc.log(fBox);
+                this.removeChild(f);
+                this.fishList.splice(this.fishList.indexOf(f), 1);
             }
         })
     },
@@ -173,7 +183,13 @@ var GameLayer = cc.Layer.extend({
         );
     },
     onGameEnded: function () {
+        // clear everything for next game
         this.gameStarted = false;
+        this.unscheduleAllCallbacks();
+        this.fishList.forEach(f => {
+            this.removeChild(f);
+        });
+        
         this.animateOutro();
 
         this.scheduleOnce(f => {

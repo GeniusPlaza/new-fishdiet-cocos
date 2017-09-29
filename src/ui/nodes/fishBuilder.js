@@ -25,6 +25,21 @@ var FISH_RESOURCES = {
     }
 };
 
+var FISH_BOX_FISHING = {
+    "blowfish": {
+        width: 50,
+        height: 20
+    },
+    "pinkfish": {
+        width: 40,
+        height: 30
+    },
+    "seahorse": {
+        width: 50,
+        height: 30
+    }
+}
+
 var FishBuilder = cc.Node.extend({
     animations: {},
     fish: null,
@@ -72,6 +87,7 @@ var FishBuilder = cc.Node.extend({
         // make object with helper functions
         this.fish = new EnemyFish(FISH_RESOURCES[fishType].sprite);
         this.fish.runAction(this.animations[fishType].clone());
+        this.fish.type = fishType;
     },
     buildText: function (text) {        
         if (this.fish) {

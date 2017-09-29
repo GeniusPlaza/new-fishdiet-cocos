@@ -8,39 +8,38 @@ var GameScene = cc.Scene.extend({
         var bg = new BackgroundLayer();
         this.addChild(bg, -1);
         
-        var title = new TitleLayer();
-        this.addChild(title, 9);
-        title.setName("title");
-        this.currentLayer = "title";
-        
-        var instructions = new InstructionsLayer();
-        this.addChild(instructions, 8);
-        instructions.setVisible(false);
-        
-        var start = new StartLayer();
-        this.addChild(start, 7);
-        start.setVisible(false);
+//        var title = new TitleLayer();
+//        this.addChild(title, 9);
+//        title.setName("title");
+//        
+//        var instructions = new InstructionsLayer();
+//        this.addChild(instructions, 8);
+//        instructions.setVisible(false);
+//        
+//        var start = new StartLayer();
+//        this.addChild(start, 7);
+//        start.setVisible(false);
         
         var game = new GameLayer();
         this.addChild(game, 6);
-        game.setVisible(false);
+//        game.setVisible(false);
         
-        var leaderboard = new LeaderboardLayer();
-        this.addChild(leaderboard, 5);
-        leaderboard.setVisible(false);
+//        var leaderboard = new LeaderboardLayer();
+//        this.addChild(leaderboard, 5);
+//        leaderboard.setVisible(false);
         
         var hud = new PauseLayer();
         this.addChild(hud, 10);
         
         this.layers = {
-            "title": title,
-            "instructions": instructions,
-            "start": start,
+//            "title": title,
+//            "instructions": instructions,
+//            "start": start,
             "game": game,
-            "leaderboard": leaderboard
+//            "leaderboard": leaderboard
         }
         
-        this.transitionTo("title");
+        this.transitionTo("game");
     },
     onEnter:function () {
         this._super();
