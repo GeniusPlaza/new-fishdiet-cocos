@@ -27,6 +27,10 @@ var EnemyFish = cc.Sprite.extend({
             .getChildByName("text")
             .setString(text);
     },
+    getString: function () {
+        return this.getChildByName("bubble")
+            .getChildByName("text").getString();
+    },
     flip: function (bool) {
         this.setFlippedX(bool);
         

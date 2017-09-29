@@ -178,7 +178,8 @@
             "ctype": "TextObjectData"
           },
           {
-            "FontSize": 100,
+            "IsCustomSize": true,
+            "FontSize": 125,
             "LabelText": "0",
             "FontResource": {
               "Type": "Normal",
@@ -202,8 +203,8 @@
               "ScaleY": 0.4781
             },
             "Position": {
-              "X": -414.0651,
-              "Y": -12.2505
+              "X": -427.0964,
+              "Y": -12.2507
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -224,15 +225,15 @@
               "X": 0.0,
               "Y": 0.0
             },
-            "LeftMargin": -446.6328,
-            "RightMargin": 374.6328,
-            "TopMargin": -47.7639,
-            "BottomMargin": -67.2361,
+            "LeftMargin": -608.0164,
+            "RightMargin": 208.0164,
+            "TopMargin": -92.1293,
+            "BottomMargin": -107.8707,
             "Tag": 918,
             "ActionTag": 895733018,
             "Size": {
-              "X": 72.0,
-              "Y": 115.0
+              "X": 400.0,
+              "Y": 200.0
             },
             "Name": "score",
             "ctype": "TextObjectData"

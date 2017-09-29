@@ -6,7 +6,10 @@ var PlayerFish = cc.Sprite.extend({
         this._super(resImages.playerFish);
         
         this.setScale(this.MAX_GROWTH);
-        cc.spriteFrameCache.addSpriteFrames(resSpriteSheet.playerFish_plist);
+        
+        cc.spriteFrameCache.addSpriteFrames(
+            resSpriteSheet.playerFish_plist
+        );
         var fishTexture = cc.textureCache.addImage(resSpriteSheet.playerFish_png),
             fishImages  = cc.SpriteBatchNode.create(fishTexture);
         this.addChild(fishImages);

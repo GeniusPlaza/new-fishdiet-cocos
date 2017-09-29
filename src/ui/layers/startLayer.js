@@ -15,12 +15,6 @@ var StartLayer = cc.Layer.extend({
         this.addChild(instructionsSign);
         instructionsSign.setName("instructionsSign");
         
-        // set text
-        var panelLabel = instructionsSign.getChildByName("panelText");
-        panelLabel.setString(FishDiet.data.getInstructions());
-        var signText = instructionsSign.getChildByName("signText");
-        signText.setString(FishDiet.questions.getCurrentQuestionTitle());
-        
         var gameSign = ccs.load(resJson.gameSign).node;
         gameSign.setScale(.6, .6);
         gameSign.setName("gameSign");
@@ -29,13 +23,6 @@ var StartLayer = cc.Layer.extend({
         // set text
         var title = gameSign.getChildByName("gameTitleText");
         title.setString(FishDiet.data.getTitle());
-        var questionsCount = gameSign.getChildByName("questionsNumber");
-        questionsCount.setString(
-            [
-                FishDiet.state.getCurrentQuestionIndex() + 1,
-                FishDiet.data.getQuestions().length
-            ].join('/')
-        );
         
         var playBtn = ccs.load(resJson.button).node;
         playBtn.setName("playBtn");
@@ -47,6 +34,19 @@ var StartLayer = cc.Layer.extend({
         var instructionsSign = this.getChildByName("instructionsSign");
         var gameSign = this.getChildByName("gameSign");
         var playBtn = this.getChildByName("playBtn");
+        
+        var panelLabel = instructionsSign.getChildByName("panelText");
+        panelLabel.setString(FishDiet.data.getInstructions());
+        var signText = instructionsSign.getChildByName("signText");
+        signText.setString(FishDiet.questions.getCurrentQuestionTitle());
+        
+        var questionsCount = gameSign.getChildByName("questionsNumber");
+        questionsCount.setString(
+            [
+                FishDiet.state.getCurrentQuestionIndex() + 1,
+                FishDiet.data.getQuestions().length
+            ].join('/')
+        );        
         
         instructionsSign.setPosition(cc.p(1250, 650));
         gameSign.setPosition(cc.p(370, 740));

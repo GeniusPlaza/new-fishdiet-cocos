@@ -276,8 +276,8 @@
               "Y": -48.7933
             },
             "Scale": {
-              "ScaleX": 0.1898,
-              "ScaleY": 0.1265
+              "ScaleX": 0.2,
+              "ScaleY": 0.13
             },
             "CColor": {},
             "IconVisible": false,
@@ -299,7 +299,7 @@
               "X": 345.0,
               "Y": 233.0
             },
-            "Name": "live1",
+            "Name": "life1",
             "ctype": "SpriteObjectData"
           },
           {
@@ -321,8 +321,8 @@
               "Y": -50.4697
             },
             "Scale": {
-              "ScaleX": 0.1898,
-              "ScaleY": 0.1265
+              "ScaleX": 0.2,
+              "ScaleY": 0.13
             },
             "CColor": {},
             "IconVisible": false,
@@ -344,7 +344,7 @@
               "X": 345.0,
               "Y": 233.0
             },
-            "Name": "live2",
+            "Name": "life2",
             "ctype": "SpriteObjectData"
           },
           {
@@ -366,8 +366,8 @@
               "Y": -50.5966
             },
             "Scale": {
-              "ScaleX": 0.1898,
-              "ScaleY": 0.1265
+              "ScaleX": 0.2,
+              "ScaleY": 0.13
             },
             "CColor": {},
             "IconVisible": false,
@@ -389,7 +389,7 @@
               "X": 345.0,
               "Y": 233.0
             },
-            "Name": "live3",
+            "Name": "life3",
             "ctype": "SpriteObjectData"
           }
         ],

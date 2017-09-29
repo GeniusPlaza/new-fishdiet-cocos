@@ -195,6 +195,7 @@
             "ctype": "SpriteObjectData"
           },
           {
+            "IsCustomSize": true,
             "FontSize": 70,
             "LabelText": "60",
             "FontResource": {
@@ -240,14 +241,14 @@
               "X": 0.0,
               "Y": 0.0
             },
-            "LeftMargin": 1.4576,
-            "RightMargin": -108.4576,
+            "LeftMargin": -35.0424,
+            "RightMargin": -144.9576,
             "TopMargin": -36.0,
             "BottomMargin": -48.0,
             "Tag": 612,
             "ActionTag": 125590242,
             "Size": {
-              "X": 107.0,
+              "X": 180.0,
               "Y": 84.0
             },
             "Name": "timerText",

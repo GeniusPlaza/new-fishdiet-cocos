@@ -1,5 +1,6 @@
 var MIN_VELOCITY = 30;
 var MAX_VELOCITY = 15;
+var MAX_TIME = 60;
 
 var GameLayer = cc.Layer.extend({
     livesSignPos: cc.p(350, 1000),
@@ -10,6 +11,7 @@ var GameLayer = cc.Layer.extend({
     gameHeight: {y: 100, height: 800},
     gameStarted: false,
     fishList: [],
+    lives: [],
     ctor:function () {
         //////////////////////////////
         // 1. super init first
@@ -23,11 +25,14 @@ var GameLayer = cc.Layer.extend({
         var livesSign = ccs.load(resJson.livesSign).node;
         this.addChild(livesSign, 1);
         livesSign.setName("livesSign");
-        livesSign.getChildByName("questionLabel").setString(
-            FishDiet.questions.getCurrentQuestionTitle()
-        );
+        this.lives = [
+            livesSign.getChildByName("life1"),
+            livesSign.getChildByName("life2"),
+            livesSign.getChildByName("life3")
+        ];
         
         var timerSign = ccs.load(resJson.timerSign).node;
+        timerSign.time = MAX_TIME;
         this.addChild(timerSign, 1);
         timerSign.setName("timerSign");
         
@@ -45,8 +50,10 @@ var GameLayer = cc.Layer.extend({
         // 4. Add player fish
         this.playerFish = new PlayerFish();
         this.playerFish.setPosition(cc.p(this.size.width / 2, this.size.height / 2));
-        this.addChild(this.playerFish);
+        this.addChild(this.playerFish);        
         
+        /////////////////////////////
+        // 6.
         this.scheduleUpdate();
         
         return true;
@@ -65,12 +72,90 @@ var GameLayer = cc.Layer.extend({
             
             if (cc.rectIntersectsRect(playerFishBox, fBox)) {
                 // remove fish from layer and list because it has been eaten
-                cc.log(playerFishBox);
-                cc.log(fBox);
                 this.removeChild(f);
                 this.fishList.splice(this.fishList.indexOf(f), 1);
+                
+                var result = FishDiet.eatFish(f.getString());
+                
+                // play bubble and reproduce effect depending on answer
+                if (result) {
+                    var right = new AnswerBubble(
+                        resSpriteSheet.bubblesRight_plist,
+                        resSpriteSheet.bubblesRight_png,
+                        "bubbleAnim300",
+                        12
+                    );
+                    right.setScale(1.3);
+                    right.setAnchorPoint(cc.p(.5, .1));
+                    this.addChild(right);
+                    right.playAtPos(f.getPosition());
+                    
+                    // update score and animate
+                    this.getChildByName("scoreSign")
+                        .getChildByName("scoreText")
+                        .setString(FishDiet.state.getScore().toFixed(0));
+                    this.getChildByName("scoreSign")
+                        .getChildByName("scoreText")
+                        .runAction(
+                            new cc.Sequence(
+                                new cc.EaseBackIn(new cc.ScaleTo(.25, 1.2)),
+                                new cc.EaseBackOut(new cc.ScaleTo(.25, 1))
+                            )
+                        );
+                } else {
+                    var wrong = new AnswerBubble(
+                        resSpriteSheet.bubblesWrong_plist,
+                        resSpriteSheet.bubblesWrong_png,
+                        "BubblePop_000",
+                        12
+                    );
+                    wrong.setScale(.5);
+                    this.addChild(wrong);
+                    wrong.playAtPos(f.getPosition());
+                    
+                    if (FishDiet.state.getLives() > 1) {
+                        this.lives[0].setColor(cc.color.YELLOW);
+                        this.lives[1].setColor(cc.color.YELLOW);
+                        
+                        // go faster
+                        [this.lives[0], this.lives[1]].forEach(l => {
+                            l.runAction(
+                                new cc.RepeatForever(
+                                    new cc.Sequence(
+                                        new cc.ScaleTo(.25, .22, .15),
+                                        new cc.ScaleTo(.25, .2, .13)
+                                    )
+                                )
+                            )
+                        });
+                        
+                        this.lives[2].setVisible(false);
+                    } else if (FishDiet.state.getLives() > 0) {
+                        this.lives[0].setColor(cc.color.RED);
+                        
+                        // go even faster
+                        this.lives[0].runAction(
+                            new cc.RepeatForever(
+                                new cc.Sequence(
+                                    new cc.Sequence(
+                                        new cc.ScaleTo(.1, .22, .15),
+                                        new cc.ScaleTo(.1, .2, .13)
+                                    )
+                                )
+                            )
+                        );
+                        
+                        this.lives[1].setVisible(false);
+                    } else {
+                        this.lives[0].setVisible(false);
+                    }
+                }
             }
-        })
+        });
+        
+        if (!FishDiet.isAlive()) {
+            this.onGameEnded();
+        }
     },
     countDown: function () {
         var countDown = 3;
@@ -100,12 +185,14 @@ var GameLayer = cc.Layer.extend({
         
         this.gameStarted = true;
         
-        this.schedule(this.createFish, 4, cc.REPEAT_FOREVER, 3);
+        this.scheduleUpdate();
+        this.schedule(this.createFish, 2, cc.REPEAT_FOREVER, 3);
+        this.schedule(this.tickTimer, 1, cc.REPEAT_FOREVER, 4);
     },
     createFish: function (dt) {
       if (this.gameStarted) {
           var newFish = this.fishPool.createFish();
-          this.addChild(newFish, 2);
+          this.addChild(newFish);
           this.fishList.push(newFish);
           
           // 1 left, 2 right
@@ -139,10 +226,39 @@ var GameLayer = cc.Layer.extend({
           );
       }
     },
+    tickTimer: function (dt) {
+        var timerSign = this.getChildByName("timerSign");
+        timerSign.time -= 1;
+        timerSign.getChildByName("timerText").setString(timerSign.time);
+        
+        if (timerSign.time - 1 == 0) {
+            this.onGameEnded();
+        }
+    },
     animateIntro: function () {
         var livesSign = this.getChildByName("livesSign");
         var timerSign = this.getChildByName("timerSign");
         var scoreSign = this.getChildByName("scoreSign");
+        
+        livesSign.getChildByName("questionLabel").setString(
+            FishDiet.questions.getCurrentQuestionTitle()
+        );
+        
+        // reset lives color        
+        this.lives.forEach(l => {
+            l.setVisible(true);
+            l.setColor(cc.color.GREEN);
+            
+            l.runAction(
+                new cc.RepeatForever(
+                    new cc.Sequence(
+                        new cc.ScaleTo(.5, .22, .15),
+                        new cc.ScaleTo(.5, .2, .13)
+                    )
+                )
+            );
+        });
+        //
         
         livesSign.setPosition(cc.p(this.livesSignPos.x, this.size.height + 200));
         livesSign.runAction(
@@ -153,11 +269,16 @@ var GameLayer = cc.Layer.extend({
         timerSign.runAction(
             new cc.EaseBounceOut(new cc.MoveTo(.5, this.timerSignPos))
         );
+        timerSign.time = MAX_TIME;
+        timerSign.getChildByName("timerText").setString(timerSign.time);
         
         scoreSign.setPosition(cc.p(this.scoreSignPos.x, this.size.height + 500));
         scoreSign.runAction(
             new cc.EaseBounceOut(new cc.MoveTo(.7, this.scoreSignPos))
         );
+        this.getChildByName("scoreSign")
+            .getChildByName("scoreText")
+            .setString(FishDiet.state.getScore().toFixed(0));
         
         this.scheduleOnce(this.countDown, .7);
     },
@@ -165,6 +286,11 @@ var GameLayer = cc.Layer.extend({
         var livesSign = this.getChildByName("livesSign");
         var timerSign = this.getChildByName("timerSign");
         var scoreSign = this.getChildByName("scoreSign");
+        
+        // restart lives
+        this.lives.forEach(l => {
+            l.stopAllActions();
+        });
         
         livesSign.runAction(
             new cc.EaseBackIn(
@@ -189,11 +315,20 @@ var GameLayer = cc.Layer.extend({
         this.fishList.forEach(f => {
             this.removeChild(f);
         });
+        this.fishList = [];
         
         this.animateOutro();
-
-        this.scheduleOnce(f => {
-            this.parent.transitionTo("start")
-        }, .2);
+        
+        FishDiet.nextQuestion();
+        
+        if (FishDiet.isQuestionsCompleted()) {
+            this.scheduleOnce(f => {
+                this.parent.transitionTo("leaderboard")
+            }, .2);
+        } else {
+            this.scheduleOnce(f => {
+                this.parent.transitionTo("start")
+            }, .2);
+        }        
     }
 });

@@ -5,7 +5,7 @@ var Answer = function (answerData) {
     
     id = answerData.id;
     text = answerData.text.trim();
-    isCorrect = answerData.isCorrect;
+    isCorrect = answerData.is_correct;
     
     return {
         getId: function () { return id; },

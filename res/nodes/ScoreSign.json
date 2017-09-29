@@ -207,6 +207,7 @@
             "ctype": "TextObjectData"
           },
           {
+            "IsCustomSize": true,
             "FontSize": 70,
             "LabelText": "0",
             "FontResource": {
@@ -252,17 +253,17 @@
               "X": 0.0,
               "Y": 0.0
             },
-            "LeftMargin": 77.1486,
-            "RightMargin": -131.1486,
+            "LeftMargin": -95.8514,
+            "RightMargin": -304.1486,
             "TopMargin": -39.1286,
             "BottomMargin": -44.8714,
             "Tag": 844,
             "ActionTag": -1139137335,
             "Size": {
-              "X": 54.0,
+              "X": 400.0,
               "Y": 84.0
             },
-            "Name": "Text_2_0",
+            "Name": "scoreText",
             "ctype": "TextObjectData"
           }
         ],

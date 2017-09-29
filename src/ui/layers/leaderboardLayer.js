@@ -18,7 +18,7 @@ var LeaderboardLayer = cc.Layer.extend({
         leaderboard.setScale(.90);
         this.addChild(leaderboard);
         leaderboard.setName("leaderboard");
-        leaderboard.getChildByName("score").setFontSize(105);
+        leaderboard.getChildByName("score").setFontSize(125);
         
         leaderboard.getChildByName("highFiveBtn")
             .addTouchEventListener(this.onHighFiveUpBtnTouch, this);
@@ -41,6 +41,10 @@ var LeaderboardLayer = cc.Layer.extend({
     },
     animateIntro: function () {
         var leaderboard = this.getChildByName("leaderboard");
+        
+        leaderboard.getChildByName("score").setString(
+            FishDiet.state.getScore().toFixed(0)
+        );
         
         leaderboard.setPosition(
             cc.p(this.size.width * 1.5, this.leaderboardPos.y)
@@ -66,6 +70,8 @@ var LeaderboardLayer = cc.Layer.extend({
                 .setVisible(false);
             leaderboard.getChildByName("highFiveBtnDown")
                 .setVisible(true);
+            
+            FishDiet.submitHighFive(true);
         }
     },
     onHighFiveDownBtnTouch: function (sender, type) {
@@ -76,6 +82,8 @@ var LeaderboardLayer = cc.Layer.extend({
                 .setVisible(true);
             leaderboard.getChildByName("highFiveBtnDown")
                 .setVisible(false);
+            
+            FishDiet.submitHighFive(false);
         }
     },
     onReflectionBtnTouch: function (sender, type) {
@@ -118,7 +126,9 @@ var LeaderboardLayer = cc.Layer.extend({
     onReplayBtnTouch: function (sender, type) {
         if (type === ccui.Widget.TOUCH_ENDED) {
             this.animateOutro();
-
+            
+            FishDiet.state.resetState();
+            
             this.scheduleOnce(f => {
                 this.parent.transitionTo("start")
             }, .2);

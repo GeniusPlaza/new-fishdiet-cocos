@@ -23,7 +23,7 @@ var Question = function (questionData) {
         checkAnswerCorrect: function (answerText) {
             return answers.find(function (a) {
                 return a.getText() === answerText;
-            }).isCorrect;
+            }).isCorrect();
         }
     }
 }
