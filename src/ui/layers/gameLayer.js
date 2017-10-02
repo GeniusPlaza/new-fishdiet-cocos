@@ -1,5 +1,5 @@
 var MIN_VELOCITY = 30;
-var MAX_VELOCITY = 15;
+var MAX_VELOCITY = 20;
 var MAX_TIME = 60;
 
 var GameLayer = cc.Layer.extend({
@@ -194,7 +194,7 @@ var GameLayer = cc.Layer.extend({
         this.gameStarted = true;
         
         this.scheduleUpdate();
-        this.schedule(this.createFish, 2, cc.REPEAT_FOREVER, 3);
+        this.schedule(this.createFish, 3, cc.REPEAT_FOREVER, 3);
         this.schedule(this.tickTimer, 1, cc.REPEAT_FOREVER, 4);
     },
     createFish: function (dt) {

@@ -61,12 +61,15 @@ var PlayerFish = cc.Sprite.extend({
                         else
                             this.setFlippedX(false);
                         
-                        var insideLRBoundaries = touch.getLocationX() < cc.winSize.width -this.width / 4 && touch.getLocationX() > this.width / 4;
-                        var insideTBBoundaries = touch.getLocationY() < cc.winSize.height -this.height / 4 && touch.getLocationY() > this.height / 4;
-                        
-                        if (insideLRBoundaries && insideTBBoundaries) {
-                            this.setPosition(newPos);
-                        }
+                        this.setPosition(newPos);
+                        if (this.x > (cc.winSize.width - (this.width * .05)))
+                            this.x = cc.winSize.width - (this.width * .05);
+                        if (this.x < (this.width  * .05))
+                            this.x = this.width * .05;
+                        if (this.y > (cc.winSize.height - (this.height * .2)))
+                            this.y = cc.winSize.height - (this.height * .2);
+                        if (this.y < (this.height  * .2))
+                            this.y = this.height * .2;
                     }
                 },
                 
@@ -93,5 +96,13 @@ var PlayerFish = cc.Sprite.extend({
         nextScale = nextScale - .05 > this.MAX_SHRINK ? this.MAX_SHRINK : nextScale - .05;
         
         this.runAction(new cc.EaseBackInOut(new cc.ScaleTo(.2, nextScale)));
+    },
+    setFlippedX: function (bool) {
+        this._super(bool);
+        
+        if (bool)
+            this.setAnchorPoint(cc.p(.8, .5));
+        else
+            this.setAnchorPoint(cc.p(.2, .5));
     }
 });
