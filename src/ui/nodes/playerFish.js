@@ -54,22 +54,34 @@ var PlayerFish = cc.Sprite.extend({
                 onTouchMoved: (touch, event) =>
                 {
                     if (drag) {
+                        var prevPos = this.getPosition();
                         var newPos = touch.getLocation();
                         
-                        if (newPos.x > this.getPositionX())
-                            this.setFlippedX(true);
-                        else
-                            this.setFlippedX(false);
+                        var distX = newPos.x - prevPos.x;
+                        var distY = newPos.y - prevPos.y;
+
+                        var dist = Math.sqrt(distX*distX, distY*distY);
                         
-                        this.setPosition(newPos);
-                        if (this.x > (cc.winSize.width - (this.width * .05)))
-                            this.x = cc.winSize.width - (this.width * .05);
-                        if (this.x < (this.width  * .05))
-                            this.x = this.width * .05;
-                        if (this.y > (cc.winSize.height - (this.height * .2)))
-                            this.y = cc.winSize.height - (this.height * .2);
-                        if (this.y < (this.height  * .2))
-                            this.y = this.height * .2;
+                        if (dist > 5) {
+                            this.setRotation(
+                                -Math.atan((newPos.y - prevPos.y)/(newPos.x - prevPos.x))*(180 / Math.PI)
+                            );
+                            
+                            if (newPos.x > prevPos.x)
+                                this.setFlippedX(true);
+                            else
+                                this.setFlippedX(false);                         
+                            
+                            this.setPosition(newPos);
+                            if (this.x > (cc.winSize.width - (this.width * .05)))
+                                this.x = cc.winSize.width - (this.width * .05);
+                            if (this.x < (this.width  * .05))
+                                this.x = this.width * .05;
+                            if (this.y > (cc.winSize.height - (this.height * .2)))
+                                this.y = cc.winSize.height - (this.height * .2);
+                            if (this.y < (this.height  * .2))
+                                this.y = this.height * .2;
+                        }                        
                     }
                 },
                 
@@ -101,8 +113,8 @@ var PlayerFish = cc.Sprite.extend({
         this._super(bool);
         
         if (bool)
-            this.setAnchorPoint(cc.p(.8, .5));
+            this.setAnchorPoint(cc.p(.5, .5));
         else
-            this.setAnchorPoint(cc.p(.2, .5));
+            this.setAnchorPoint(cc.p(.5, .5));
     }
 });
