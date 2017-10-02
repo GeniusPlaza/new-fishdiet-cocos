@@ -43,6 +43,8 @@ var GameScene = cc.Scene.extend({
     },
     onEnter:function () {
         this._super();
+        
+        cc.audioEngine.playMusic(resMusic.bg, true);
     },
     transitionTo: function (name) {
         cc.log("transitioning to: " + name);
@@ -57,9 +59,9 @@ var GameScene = cc.Scene.extend({
         this.layers[this.currentLayer].animateIntro();
     },
     pauseGame: function () {
-        
+        this.layers["game"].pause();
     },
     resumeGame: function () {
-        
+        this.layers["game"].resume();
     }
 });

@@ -90,6 +90,8 @@ var GameLayer = cc.Layer.extend({
                     this.addChild(right);
                     right.playAtPos(f.getPosition());
                     
+                    cc.audioEngine.playEffect(resMusic.correct_answer);
+                    
                     // update score and animate
                     this.getChildByName("scoreSign")
                         .getChildByName("scoreText")
@@ -112,6 +114,8 @@ var GameLayer = cc.Layer.extend({
                     wrong.setScale(.5);
                     this.addChild(wrong);
                     wrong.playAtPos(f.getPosition());
+                    
+                    cc.audioEngine.playEffect(resMusic.bad_answer);
                     
                     if (FishDiet.state.getLives() > 1) {
                         this.lives[0].setColor(cc.color.YELLOW);
@@ -231,7 +235,7 @@ var GameLayer = cc.Layer.extend({
         timerSign.time -= 1;
         timerSign.getChildByName("timerText").setString(timerSign.time);
         
-        if (timerSign.time - 1 == 0) {
+        if (timerSign.time - 1 < 0) {
             this.onGameEnded();
         }
     },
@@ -330,5 +334,29 @@ var GameLayer = cc.Layer.extend({
                 this.parent.transitionTo("start")
             }, .2);
         }        
+    },
+    pause: function () {
+        this._super();
+        
+        this.playerFish.pause();
+        
+        this.getChildByName("timerSign").pause();
+        
+        // pause fishes
+        this.fishList.forEach(f => {
+            f.pause();
+        });
+    },
+    resume: function () {
+        this._super();
+        
+        this.playerFish.resume();
+        
+        this.getChildByName("timerSign").resume();
+        
+        // resume fishes
+        this.fishList.forEach(f => {
+            f.resume();
+        });
     }
 });

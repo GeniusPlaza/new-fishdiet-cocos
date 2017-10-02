@@ -49,7 +49,7 @@ var GeniusPlazaAPI = {
             "/en/gethighscores",
             {resourceid:this.gameId},
             function(response)
-            {			
+            {
                 if (response.result=='ok')
                 {
                     return response.highscores;

@@ -1,3 +1,4 @@
+
 var AnswerBubble = cc.Sprite.extend({
     animation: null,
     ctor: function (plist, png, prefix, count) {

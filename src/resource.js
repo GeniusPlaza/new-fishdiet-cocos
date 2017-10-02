@@ -51,6 +51,12 @@ var resFonts = {
     vanilla: {type:"font", name: "Vanilla copy", srcs: ["res/fonts/Vanilla copy.ttf"]}
 };
 
+var resMusic = {
+    bg: "res/sounds/music/bg-music.wav",
+    bad_answer: "res/sounds/sfx/bad-answer.wav",
+    correct_answer: "res/sounds/sfx/correct-answer.wav"
+};
+
 var resExtra = {
     textColor: new cc.Color(248, 140, 25)
 };
@@ -70,6 +76,10 @@ for (var i in resImages) {
 
 for (var i in resFonts) {
     g_resources.push(resFonts[i]);
+}
+
+for (var i in resMusic) {
+    g_resources.push(resMusic[i]);
 }
 
 /*

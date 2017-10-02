@@ -24,11 +24,6 @@ var FishDiet = new function () {
             this.state.addScore(SCORE_PER_FISH);
         } else {
             this.state.reduceLife();
-            
-            if (this.state.getLives() == 0) {
-                
-                
-            }
         }
         
         return result;

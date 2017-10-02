@@ -1,6 +1,8 @@
 
 var PauseLayer = cc.Layer.extend({
     pausePopupPos: cc.p(960, 530),
+    musicVolume: 1,
+    effectsVolume: 1,
     ctor:function () {
         //////////////////////////////
         // 1. super init first
@@ -76,12 +78,16 @@ var PauseLayer = cc.Layer.extend({
     },
     onMusicSliderChange: function (sender, type) {
         if (type === ccui.Slider.EVENT_PERCENT_CHANGED) {
-            cc.log("changing music");
+            cc.audioEngine.setMusicVolume(
+                sender.getPercent()/100
+            );
         }
     },
     onEffectsSliderChange: function (sender, type) {
         if (type === ccui.Slider.EVENT_PERCENT_CHANGED) {
-            cc.log("changing effects");
+            cc.audioEngine.setEffectsVolume(
+                sender.getPercent()/100
+            );
         }
     }
 });
