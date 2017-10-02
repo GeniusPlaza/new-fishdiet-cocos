@@ -26,7 +26,7 @@ var GameScene = cc.Scene.extend({
         
         var game = new GameLayer();
         this.addChild(game, 5);
-        game.setVisible(false);
+//        game.setVisible(false);
         
         var hud = new PauseLayer();
         this.addChild(hud, 10);
@@ -49,7 +49,7 @@ var GameScene = cc.Scene.extend({
     transitionTo: function (name) {
         cc.log("transitioning to: " + name);
         
-        if (this.currentLayer) {
+        if (this.currentLayer && this.currentLayer != "game") {
             this.layers[this.currentLayer].setVisible(false);
         }
         

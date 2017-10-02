@@ -27,6 +27,8 @@ var TitleLayer = cc.Layer.extend({
         var blueFish = rootNode.getChildByName("blueFish");
         this.bluefishPos = blueFish.getPosition();
         
+        var fishCreator = new FishCreator();
+        
         return true;
     },
     animateIntro: function () {

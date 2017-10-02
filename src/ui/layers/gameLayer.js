@@ -30,15 +30,18 @@ var GameLayer = cc.Layer.extend({
             livesSign.getChildByName("life2"),
             livesSign.getChildByName("life3")
         ];
+        livesSign.setPosition(cc.p(this.livesSignPos.x, this.size.height + 200));
         
         var timerSign = ccs.load(resJson.timerSign).node;
         timerSign.time = MAX_TIME;
         this.addChild(timerSign, 1);
         timerSign.setName("timerSign");
+        timerSign.setPosition(cc.p(this.timerSignPos.x, this.size.height + 500));
         
         var scoreSign = ccs.load(resJson.scoreSign).node;
         this.addChild(scoreSign, 1);
         scoreSign.setName("scoreSign");
+        scoreSign.setPosition(cc.p(this.scoreSignPos.x, this.size.height + 500));
         
         var rootNode = ccs.load(resJson.enemyFish);
         
@@ -49,8 +52,9 @@ var GameLayer = cc.Layer.extend({
         /////////////////////////////
         // 4. Add player fish
         this.playerFish = new PlayerFish();
-        this.playerFish.setPosition(cc.p(this.size.width / 2, this.size.height / 2));
-        this.addChild(this.playerFish);        
+        this.playerFish.setPosition(cc.p(this.size.width * .25, this.size.height * .25));
+        this.playerFish.setFlippedX(true);
+        this.addChild(this.playerFish);
         
         /////////////////////////////
         // 6.
