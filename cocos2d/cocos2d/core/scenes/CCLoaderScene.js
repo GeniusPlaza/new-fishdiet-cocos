@@ -61,7 +61,7 @@ cc.LoaderScene = cc.Scene.extend({
                 logoHeight = img.height;
                 self._initStage(img, cc.visibleRect.center);
             });
-            fontSize = 14;
+            fontSize = 24;
             lblHeight = -logoHeight / 2 - 10;
         }
         //loading percent
@@ -74,14 +74,14 @@ cc.LoaderScene = cc.Scene.extend({
 
     _initStage: function (img, centerPos) {
         var self = this;
-        var texture2d = self._texture2d = new cc.Texture2D();
-        texture2d.initWithElement(img);
-        texture2d.handleLoadedTexture();
-        var logo = self._logo = new cc.Sprite(texture2d);
-        logo.setScale(cc.contentScaleFactor());
-        logo.x = centerPos.x;
-        logo.y = centerPos.y;
-        self._bgLayer.addChild(logo, 10);
+//        var texture2d = self._texture2d = new cc.Texture2D();
+//        texture2d.initWithElement(img);
+//        texture2d.handleLoadedTexture();
+//        var logo = self._logo = new cc.Sprite(texture2d);
+//        logo.setScale(cc.contentScaleFactor());
+//        logo.x = centerPos.x;
+//        logo.y = centerPos.y;
+//        self._bgLayer.addChild(logo, 10);
     },
     /**
      * custom onEnter
