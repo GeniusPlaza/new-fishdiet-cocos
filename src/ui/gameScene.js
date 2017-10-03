@@ -44,11 +44,9 @@ var GameScene = cc.Scene.extend({
     onEnter:function () {
         this._super();
         
-//        cc.audioEngine.playMusic(resMusic.bg, true);
+        cc.audioEngine.playMusic(resMusic.bg, true);
     },
-    transitionTo: function (name) {
-        cc.log("transitioning to: " + name);
-        
+    transitionTo: function (name) {        
         if (this.currentLayer && this.currentLayer != "game") {
             this.layers[this.currentLayer].setVisible(false);
         }

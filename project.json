@@ -28,6 +28,7 @@
         "src/engine/fishDiet.js",
         
         
+        "src/ui/layers/baseLayer.js",
         "src/ui/layers/blackLayer.js",
         "src/ui/layers/backgroundLayer.js",
         "src/ui/layers/pauseLayer.js",

@@ -1,7 +1,8 @@
 
-var InstructionsLayer = cc.Layer.extend({
+var InstructionsLayer = BaseLayer.extend({
     tutorialSignScale: 0.8,
     playBtnPos: cc.p(),
+    nextLayer: "start",
     ctor:function () {
         //////////////////////////////
         // 1. super init first
@@ -21,6 +22,8 @@ var InstructionsLayer = cc.Layer.extend({
         return true;
     },
     animateIntro: function () {
+        this._super();
+        
         var rootNode = this.getChildByName("rootNode");
         
         var sign1 = rootNode.getChildByName("tutorialSign1");
@@ -34,7 +37,7 @@ var InstructionsLayer = cc.Layer.extend({
         
         sign1.runAction(
             new cc.Sequence(
-                new cc.EaseBackOut(new cc.ScaleTo(.2, this.tutorialSignScale)),
+                new cc.EaseBackOut(new cc.ScaleTo(this.animationSpeed, this.tutorialSignScale)),
                 new cc.CallFunc(function () {
                     this.runAction(
                         new cc.RepeatForever(
@@ -50,8 +53,8 @@ var InstructionsLayer = cc.Layer.extend({
         
         sign2.runAction(
             new cc.Sequence(
-                new cc.DelayTime(.2),
-                new cc.EaseBackOut(new cc.ScaleTo(.2, this.tutorialSignScale)),
+                new cc.DelayTime(this.animationSpeed),
+                new cc.EaseBackOut(new cc.ScaleTo(this.animationSpeed, this.tutorialSignScale)),
                 new cc.CallFunc(function () {
                     this.runAction(
                         new cc.RepeatForever(
@@ -68,7 +71,7 @@ var InstructionsLayer = cc.Layer.extend({
         sign3.runAction(
             new cc.Sequence(
                 new cc.DelayTime(.4),
-                new cc.EaseBackOut(new cc.ScaleTo(.2, this.tutorialSignScale)),
+                new cc.EaseBackOut(new cc.ScaleTo(this.animationSpeed, this.tutorialSignScale)),
                 new cc.CallFunc(function () {
                     this.runAction(
                         new cc.RepeatForever(
@@ -94,28 +97,25 @@ var InstructionsLayer = cc.Layer.extend({
         playBtn.addTouchEventListener(this.onPlayBtnTouch, this);
     },
     animateOutro: function () {
+        this._super();
+        
         var rootNode = this.getChildByName("rootNode");
         
         var sign1 = rootNode.getChildByName("tutorialSign1");
         var sign2 = rootNode.getChildByName("tutorialSign2");
         var sign3 = rootNode.getChildByName("tutorialSign3");
         
-        sign1.runAction(new cc.EaseBackIn(new cc.ScaleTo(.2, 0)));
-        sign2.runAction(new cc.EaseBackIn(new cc.ScaleTo(.2, 0)));
-        sign3.runAction(new cc.EaseBackIn(new cc.ScaleTo(.2, 0)));
+        sign1.stopAllActions();
+        sign2.stopAllActions();
+        sign3.stopAllActions();
+        
+        sign1.runAction(new cc.EaseBackIn(new cc.ScaleTo(this.animationSpeed, 0)));
+        sign2.runAction(new cc.EaseBackIn(new cc.ScaleTo(this.animationSpeed, 0)));
+        sign3.runAction(new cc.EaseBackIn(new cc.ScaleTo(this.animationSpeed, 0)));
         
         var playBtn = rootNode.getChildByName("playBtn");
         playBtn.runAction(
-            new cc.MoveTo(.2, cc.p(this.size.width / 2, -playBtn.height))
+            new cc.MoveTo(this.animationSpeed, cc.p(this.size.width / 2, -playBtn.height))
         );
-    },
-    onPlayBtnTouch: function (sender, type) {
-        if (type === ccui.Widget.TOUCH_ENDED) {
-            this.animateOutro();
-            
-            this.scheduleOnce(f => {
-                this.parent.transitionTo("start")
-            }, .2);
-        }
     }
 });

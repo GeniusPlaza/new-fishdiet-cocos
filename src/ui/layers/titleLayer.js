@@ -1,8 +1,9 @@
 
-var TitleLayer = cc.Layer.extend({
+var TitleLayer = BaseLayer.extend({
     signPos: cc.p(960.00, 635.00),
     bluefishPos: cc.p(0,0),
     playBtnPos: cc.p(0,0),
+    nextLayer: "instructions",
     ctor:function () {
         //////////////////////////////
         // 1. super init first
@@ -32,12 +33,16 @@ var TitleLayer = cc.Layer.extend({
         return true;
     },
     animateIntro: function () {
+        this._super();
+        
         var rootNode = this.getChildByName("rootNode");
         var sign = this.getChildByName("sign");
         
         var signFinalPos = this.signPos;
         sign.setPosition(cc.p(this.size.width / 2, this.size.height + 200));
-        sign.runAction(new cc.EaseBounceOut(new cc.MoveTo(.6, signFinalPos)));
+        sign.runAction(
+            new cc.EaseBounceOut(new cc.MoveTo(.6, signFinalPos))
+        );
         sign.runAction(
             new cc.RepeatForever(
                 new cc.Sequence(
@@ -81,12 +86,16 @@ var TitleLayer = cc.Layer.extend({
         playBtn.runAction(
             new cc.Sequence(
                 new cc.DelayTime(.5),
-                new cc.EaseBounceOut(new cc.MoveTo(.8, playFinalPos))
+                new cc.EaseBounceOut(
+                    new cc.MoveTo(.4, playFinalPos)
+                )
             )
         );
         playBtn.addTouchEventListener(this.onPlayBtnTouch, this);
     },
     animateOutro: function () {
+        this._super();
+        
         var rootNode = this.getChildByName("rootNode");
         var sign = this.getChildByName("sign");
         
@@ -110,14 +119,5 @@ var TitleLayer = cc.Layer.extend({
         playBtn.runAction(
             new cc.MoveTo(.2, cc.p(this.size.width / 2, -playBtn.height))
         );
-    },
-    onPlayBtnTouch: function (sender, type) {
-        if (type === ccui.Widget.TOUCH_ENDED) {
-            this.animateOutro();
-            
-            this.scheduleOnce(f => {
-                this.parent.transitionTo("instructions")
-            }, .2);
-        }
     }
 });

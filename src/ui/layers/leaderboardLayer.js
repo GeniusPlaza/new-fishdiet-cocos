@@ -1,7 +1,8 @@
 
-var LeaderboardLayer = cc.Layer.extend({
+var LeaderboardLayer = BaseLayer.extend({
     leaderboardPos: cc.p(960, 540),
     reflectionPanelPos: cc.p(960, 600),
+    nextLayer: "start",
     ctor:function () {
         //////////////////////////////
         // 1. super init first
@@ -27,7 +28,7 @@ var LeaderboardLayer = cc.Layer.extend({
         leaderboard.getChildByName("reflectionBtn")
             .addTouchEventListener(this.onReflectionBtnTouch, this);
         leaderboard.getChildByName("replayBtn")
-            .addTouchEventListener(this.onReplayBtnTouch, this);
+            .addTouchEventListener(this.onPlayBtnTouch, this);
         
         var reflectionPanel = ccs.load(resJson.reflectionPanel).node;
         reflectionPanel.setScale(.85, .90);
@@ -40,6 +41,8 @@ var LeaderboardLayer = cc.Layer.extend({
         reflectionPanel.getChildByName("reflectionsField").setPlaceHolderColor(cc.color.WHITE);
     },
     animateIntro: function () {
+        this._super();
+        
         var leaderboard = this.getChildByName("leaderboard");
         
         leaderboard.getChildByName("score").setString(
@@ -50,15 +53,22 @@ var LeaderboardLayer = cc.Layer.extend({
             cc.p(this.size.width * 1.5, this.leaderboardPos.y)
         );
         leaderboard.runAction(
-            new cc.EaseBackOut(new cc.MoveTo(.5, this.leaderboardPos))
+            new cc.EaseBackOut(
+                new cc.MoveTo(this.animationSpeed, this.leaderboardPos)
+            )
         );
     },
     animateOutro: function () {
+        this._super();
+        
         var leaderboard = this.getChildByName("leaderboard");
         
         leaderboard.runAction(
             new cc.EaseBackIn(
-                new cc.MoveTo(.2, cc.p(this.size.width * 1.5, this.leaderboardPos.y))
+                new cc.MoveTo(
+                    this.animationSpeed,
+                    cc.p(this.size.width * 1.5, this.leaderboardPos.y)
+                )
             )
         );
     },
@@ -111,7 +121,10 @@ var LeaderboardLayer = cc.Layer.extend({
             
             reflectionPanel.runAction(
                 new cc.EaseBackIn(
-                    new cc.MoveTo(.2, cc.p(this.reflectionPanelPos.x, this.size.height * 1.5))
+                    new cc.MoveTo(
+                        this.animationSpeed,
+                        cc.p(this.reflectionPanelPos.x, this.size.height * 1.5)
+                    )
                 )
             );
             
@@ -120,18 +133,14 @@ var LeaderboardLayer = cc.Layer.extend({
                 leaderboard.setVisible(true);
                 
                 this.animateIntro();
-            }, .2)
+            }, this.animationSpeed)
         }
     },
-    onReplayBtnTouch: function (sender, type) {
+    onPlayBtnTouch: function (sender, type) {
         if (type === ccui.Widget.TOUCH_ENDED) {
-            this.animateOutro();
-            
             FishDiet.state.resetState();
             
-            this.scheduleOnce(f => {
-                this.parent.transitionTo("start")
-            }, .2);
+            this._super();
         }
     }
 });

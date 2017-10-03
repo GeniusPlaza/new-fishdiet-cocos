@@ -332,11 +332,11 @@ var GameLayer = cc.Layer.extend({
         if (FishDiet.isQuestionsCompleted()) {
             this.scheduleOnce(f => {
                 this.parent.transitionTo("leaderboard")
-            }, .2);
+            }, .4);
         } else {
             this.scheduleOnce(f => {
                 this.parent.transitionTo("start")
-            }, .2);
+            }, .4);
         }        
     },
     pause: function () {
