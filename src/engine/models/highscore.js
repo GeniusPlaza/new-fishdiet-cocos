@@ -6,8 +6,7 @@ var Highscore = function (highscoreData) {
     username = highscoreData.username;
     
     return {
-        toString: function () {
-            return [username, score].join(' '); 
-        }
+        username: username,
+        score: score
     }
 }

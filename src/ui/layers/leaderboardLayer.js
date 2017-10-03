@@ -166,7 +166,7 @@ var LeaderboardLayer = BaseLayer.extend({
     },
     onPlayBtnTouch: function (sender, type) {
         if (type === ccui.Widget.TOUCH_ENDED) {
-            FishDiet.state.resetState();
+            FishDiet.replayGame();
             
             this._super();
         }
