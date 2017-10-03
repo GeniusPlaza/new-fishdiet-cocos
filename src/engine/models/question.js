@@ -15,6 +15,9 @@ var Question = function (questionData) {
         getId: function () { return id; },
         getTitle: function () { return title; },
         getAudioInstructions: function () { return audioInstructions; },
+        getAnswers: function () {
+            return answers;
+        },
         getAnswersText: function () {
             return answers.map(function (a) {
                 return a.getText();

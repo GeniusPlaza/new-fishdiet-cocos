@@ -194,12 +194,12 @@ var GameLayer = cc.Layer.extend({
         this.gameStarted = true;
         
         this.scheduleUpdate();
-        this.schedule(this.createFish, 3, cc.REPEAT_FOREVER, 3);
+        this.schedule(this.createFish, 2.3, cc.REPEAT_FOREVER, 3);
         this.schedule(this.tickTimer, 1, cc.REPEAT_FOREVER, 4);
     },
     createFish: function (dt) {
       if (this.gameStarted) {
-          var newFish = this.fishPool.createFish();
+          var newFish = this.fishPool.getFish();
           this.addChild(newFish);
           this.fishList.push(newFish);
           
@@ -244,6 +244,8 @@ var GameLayer = cc.Layer.extend({
         }
     },
     animateIntro: function () {
+        this.fishPool.prepareAnswers();
+        
         var livesSign = this.getChildByName("livesSign");
         var timerSign = this.getChildByName("timerSign");
         var scoreSign = this.getChildByName("scoreSign");

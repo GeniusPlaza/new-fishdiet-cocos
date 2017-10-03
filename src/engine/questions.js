@@ -30,4 +30,32 @@ var Questions = function (data, state) {
         else
             return "";
     };
+    
+    this.getQuestionRightAnswer = function () {
+        var currentQuestion = data.getQuestions()[state.getCurrentQuestionIndex()];
+        
+        if (currentQuestion) {
+            var answers = currentQuestion.getAnswers().filter(
+                function (a) {return a.isCorrect();}
+            );
+            
+            var index = Utils.randomNumber(0, answers.length);
+            return answers[index].getText();
+        }
+        return null;
+    };
+    
+    this.getQuestionWrongAnswer = function () {
+        var currentQuestion = data.getQuestions()[state.getCurrentQuestionIndex()];
+        
+        if (currentQuestion) {
+            var answers = currentQuestion.getAnswers().filter(
+                function (a) {return !a.isCorrect();}
+            );
+            
+            var index = Utils.randomNumber(0, answers.length);
+            return answers[index].getText();
+        }
+        return null;
+    };
 }
