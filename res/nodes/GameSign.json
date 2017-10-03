@@ -335,7 +335,7 @@
           },
           {
             "IsCustomSize": true,
-            "FontSize": 50,
+            "FontSize": 55,
             "LabelText": "",
             "FontResource": {
               "Type": "Normal",
@@ -343,7 +343,7 @@
               "Plist": ""
             },
             "HorizontalAlignmentType": "HT_Center",
-            "VerticalAlignmentType": "VT_TOP",
+            "VerticalAlignmentType": "VT_Top",
             "OutlineSize": 4,
             "OutlineColor": {},
             "OutlineEnabled": true,
@@ -387,7 +387,7 @@
             "Tag": 328,
             "ActionTag": -1257294792,
             "Size": {
-              "X": 700.0,
+              "X": 650.0,
               "Y": 200.0
             },
             "Name": "gameTitleText",

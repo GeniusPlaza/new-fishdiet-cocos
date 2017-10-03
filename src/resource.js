@@ -48,7 +48,8 @@ var resJson = {
 };
 
 var resFonts = {
-    vanilla: {type:"font", name: "Vanilla copy", srcs: ["res/fonts/Vanilla copy.ttf"]}
+    vanilla: {type:"font", name: "Vanilla copy", srcs: ["res/fonts/Vanilla copy.ttf"]},
+    monserrat: {type:"font", name: "Montserrat-Regular", srcs: ["res/fonts/Montserrat-Regular.ttf"]}
 };
 
 var resMusic = {

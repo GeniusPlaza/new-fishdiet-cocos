@@ -65,8 +65,8 @@ var GameLayer = cc.Layer.extend({
     update: function (dt) {
         var playerFishBox = this.playerFish.getBoundingBox();
         // fixing for more realistic collision
-        playerFishBox.width -= 30;
-        playerFishBox.height -= 20;
+        playerFishBox.width -= 40;
+        playerFishBox.height -= 30;
         
         this.fishList.forEach(f => {
             var fBox = f.getBoundingBox();

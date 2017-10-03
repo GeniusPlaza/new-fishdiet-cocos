@@ -19,7 +19,7 @@ var LeaderboardLayer = BaseLayer.extend({
         leaderboard.setScale(.90);
         this.addChild(leaderboard);
         leaderboard.setName("leaderboard");
-        leaderboard.getChildByName("score").setFontSize(125);
+        leaderboard.getChildByName("score").setFontSize(100);
         
         leaderboard.getChildByName("highFiveBtn")
             .addTouchEventListener(this.onHighFiveUpBtnTouch, this);
@@ -29,6 +29,10 @@ var LeaderboardLayer = BaseLayer.extend({
             .addTouchEventListener(this.onReflectionBtnTouch, this);
         leaderboard.getChildByName("replayBtn")
             .addTouchEventListener(this.onPlayBtnTouch, this);
+        
+        var listView = leaderboard.getChildByName("scoresList");
+        listView.setTouchEnabled( true );
+        listView.setBounceEnabled( true );
         
         var reflectionPanel = ccs.load(resJson.reflectionPanel).node;
         reflectionPanel.setScale(.85, .90);
@@ -57,6 +61,8 @@ var LeaderboardLayer = BaseLayer.extend({
                 new cc.MoveTo(this.animationSpeed, this.leaderboardPos)
             )
         );
+        
+        this.fillHighScoreListView();
     },
     animateOutro: function () {
         this._super();
@@ -71,6 +77,28 @@ var LeaderboardLayer = BaseLayer.extend({
                 )
             )
         );
+    },
+    fillHighScoreListView: function () {
+        var leaderboard = this.getChildByName("leaderboard");
+        var highscores = FishDiet.data.getHighScores();
+        var listView = leaderboard.getChildByName("scoresList");
+        listView.removeAllItems();
+        
+        highscores.forEach(f => {
+            cc.log(f.username + " " + f.score);
+            var label = new ccui.Text(
+                f.username + "\t\t\t\t" + f.score,
+                _b_getFontName(resFonts.monserrat),
+                16
+            );
+            label.setColor(resExtra.textColor);
+            label.enableGlow(resExtra.textColor);
+            label.setTextAreaSize(
+                cc.size(listView.width * .9, 20)
+            );
+            label.setTextHorizontalAlignment(cc.TEXT_ALIGNMENT_RIGHT)
+            listView.pushBackCustomItem(label);
+        });
     },
     onHighFiveUpBtnTouch: function (sender, type) {
         if (type === ccui.Widget.TOUCH_ENDED) {

@@ -206,8 +206,8 @@
               "Path": "fonts/Vanilla copy.ttf",
               "Plist": ""
             },
-            "HorizontalAlignmentType": "HT_Center",
-            "VerticalAlignmentType": "VT_TOP",
+            "HorizontalAlignmentType": "HT_CENTER",
+            "VerticalAlignmentType": "VT_CENTER",
             "OutlineSize": 4,
             "OutlineColor": {},
             "OutlineEnabled": true,
@@ -251,7 +251,7 @@
             "Tag": 432,
             "ActionTag": -1390924787,
             "Size": {
-              "X": 550.0,
+              "X": 500.0,
               "Y": 110.0
             },
             "Name": "questionLabel",

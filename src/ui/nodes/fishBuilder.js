@@ -27,18 +27,18 @@ var FISH_RESOURCES = {
 
 var FISH_BOX_FISHING = {
     "blowfish": {
-        width: 50,
+        width: 60,
         height: 20
     },
     "pinkfish": {
-        width: 40,
+        width: 50,
         height: 30
     },
     "seahorse": {
         width: 50,
         height: 30
     }
-}
+};
 
 var FishBuilder = cc.Node.extend({
     animations: {},

@@ -45,7 +45,12 @@ var GameData = function () {
         return questions;
     };
     
-    this.getLeaderboard = function () {
-        return highscores;
+    this.getHighScores = function () {
+        return [
+            {username: "kkmodi", score: 500},
+            {username: "denissegenius", score: 400},
+            {username: "marcokid", score: 200},
+            {username: "ian", score: 100}
+        ];
     };
 }
