@@ -2,6 +2,7 @@
 var PlayerFish = cc.Sprite.extend({
     MAX_GROWTH: .6,
     MAX_SHRINK: .4,
+    newRotation: 0,
     ctor: function () {
         this._super(resImages.playerFish);
         
@@ -62,25 +63,26 @@ var PlayerFish = cc.Sprite.extend({
 
                         var dist = Math.sqrt(distX*distX, distY*distY);
                         
-                        if (dist > 5) {
-                            this.setRotation(
-                                -Math.atan((newPos.y - prevPos.y)/(newPos.x - prevPos.x))*(180 / Math.PI)
-                            );
-                            
-                            if (newPos.x > prevPos.x)
+                        cc.log(newPos, " ", prevPos);
+                        cc.log(dist);
+                        
+                        if (dist > 15 && (newPos.x != prevPos.x)) {                            
+                            if (newPos.x > prevPos.x) {
                                 this.setFlippedX(true);
-                            else
-                                this.setFlippedX(false);                         
+                            }
+                            else {
+                                this.setFlippedX(false);
+                            }
                             
                             this.setPosition(newPos);
-                            if (this.x > (cc.winSize.width - (this.width * .05)))
-                                this.x = cc.winSize.width - (this.width * .05);
-                            if (this.x < (this.width  * .05))
-                                this.x = this.width * .05;
-                            if (this.y > (cc.winSize.height - (this.height * .2)))
-                                this.y = cc.winSize.height - (this.height * .2);
-                            if (this.y < (this.height  * .2))
-                                this.y = this.height * .2;
+                            if (this.x > (cc.winSize.width - (this.width * .2)))
+                                this.x = cc.winSize.width - (this.width * .2);
+                            if (this.x < (this.width  * .2))
+                                this.x = this.width * .2;
+                            if (this.y > (cc.winSize.height - (this.height * .3)))
+                                this.y = cc.winSize.height - (this.height * .3);
+                            if (this.y < (this.height  * .3))
+                                this.y = this.height * .3;
                         }                        
                     }
                 },
@@ -95,7 +97,13 @@ var PlayerFish = cc.Sprite.extend({
             }, this);
         }
         
+        this.scheduleUpdate();
+        
         return true;
+    },
+    update: function (dt) {
+//        this.setRotationX(this.getRotationX() + (this.newRotationX-this.getRotationX()) * dt);
+//        this.setRotationY(this.getRotationY() + (this.newRotationY-this.getRotationY()) * dt);
     },
     grow: function () {
         var nextScale = this.getScale();
@@ -113,8 +121,8 @@ var PlayerFish = cc.Sprite.extend({
         this._super(bool);
         
         if (bool)
-            this.setAnchorPoint(cc.p(.5, .5));
+            this.setAnchorPoint(cc.p(1, .5));
         else
-            this.setAnchorPoint(cc.p(.5, .5));
+            this.setAnchorPoint(cc.p(0, .5));
     }
 });
