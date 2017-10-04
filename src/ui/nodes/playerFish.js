@@ -1,8 +1,13 @@
+var PLAYER_FISH_ADJUST = {
+    width: 40,
+    height: 30
+}
 
 var PlayerFish = cc.Sprite.extend({
     MAX_GROWTH: .6,
     MAX_SHRINK: .4,
     newRotation: 0,
+    rotationSpeed: .25,
     ctor: function () {
         this._super(resImages.playerFish);
         
@@ -33,7 +38,8 @@ var PlayerFish = cc.Sprite.extend({
         
         this.runAction(animate);
         
-        var drag = false;
+        this.dragging = false;
+        var startMousePos = cc.p();
         
         // follow touch
         if ( cc.sys.capabilities.hasOwnProperty( 'touches' ) )
@@ -46,7 +52,8 @@ var PlayerFish = cc.Sprite.extend({
                 // called when the touch first begins
                 onTouchBegan: (touch, event) => {
                     if (cc.rectContainsPoint(this.getBoundingBox(), touch.getLocation())) {
-                        drag = true;
+                        this.dragging = true;
+                        startMousePos = touch.getLocation();
                     }
                     return true;
                 },
@@ -54,45 +61,60 @@ var PlayerFish = cc.Sprite.extend({
                 // called when the user moves their finger
                 onTouchMoved: (touch, event) =>
                 {
-                    if (drag) {
-                        var prevPos = this.getPosition();
-                        var newPos = touch.getLocation();
+                    if (this.dragging) {
+                        var fishPos = this.getPosition();
+                        var fishArea = this.getContentSize();
                         
-                        var distX = newPos.x - prevPos.x;
-                        var distY = newPos.y - prevPos.y;
-
-                        var dist = Math.sqrt(distX*distX, distY*distY);
+                        var mousePos = touch.getLocation();
                         
-                        cc.log(newPos, " ", prevPos);
-                        cc.log(dist);
+                        // true - right
+                        var direction = mousePos.x >= startMousePos.x;
                         
-                        if (dist > 15 && (newPos.x != prevPos.x)) {                            
-                            if (newPos.x > prevPos.x) {
-                                this.setFlippedX(true);
-                            }
-                            else {
+                        cc.log(mousePos, fishPos);
+                        
+                        if (this.isFlippedX()) {
+                            // anchor point is always at the end
+                            var fishRightB = this.getPositionX();
+                            var fishLeftB = this.getPositionX();
+                            
+                            // flipback only when the direction is left, even if
+                            // the starting pos is inside the fish
+                            cc.log(direction);
+                            if ((mousePos.x < fishLeftB) && !direction) {
                                 this.setFlippedX(false);
                             }
+                        } else {
+                            // anchor point is always at the end
+                            var fishRightB = this.getPositionX() + fishArea.width / 4;
+                            var fishLeftB = this.getPositionX();
                             
-                            this.setPosition(newPos);
-                            if (this.x > (cc.winSize.width - (this.width * .2)))
-                                this.x = cc.winSize.width - (this.width * .2);
-                            if (this.x < (this.width  * .2))
-                                this.x = this.width * .2;
-                            if (this.y > (cc.winSize.height - (this.height * .3)))
-                                this.y = cc.winSize.height - (this.height * .3);
-                            if (this.y < (this.height  * .3))
-                                this.y = this.height * .3;
-                        }                        
+                            if ((mousePos.x > fishLeftB) && direction) {
+                                this.setFlippedX(true);
+                            }
+                        }
+                        
+                        // the direction is calculated from the current point
+                        startMousePos = mousePos;
+                        
+                        this.setPosition(mousePos);
+                        
+                        if (this.x > (cc.winSize.width - (this.width * .1)))
+                            this.x = cc.winSize.width - (this.width * .1);
+                        if (this.x < (this.width  * .1))
+                            this.x = this.width * .1;
+                        if (this.y > (cc.winSize.height - (this.height * .3)))
+                            this.y = cc.winSize.height - (this.height * .3);
+                        if (this.y < (this.height  * .3))
+                            this.y = this.height * .3;
                     }
                 },
                 
                 onTouchEnded: (touch, event) => {
-                    drag = false;
+                    this.dragging = false;
                 },
                 
                 onTouchCancelled: (touch, event) => {
-                    drag = false;
+                    this.dragging = false;
                 }
             }, this);
         }
@@ -103,7 +125,7 @@ var PlayerFish = cc.Sprite.extend({
     },
     update: function (dt) {
 //        this.setRotationX(this.getRotationX() + (this.newRotationX-this.getRotationX()) * dt);
-//        this.setRotationY(this.getRotationY() + (this.newRotationY-this.getRotationY()) * dt);
+//        this.setRotationY(this.getRotationY() + (this.newRotationY-this.getRotationY()) * dt);      
     },
     grow: function () {
         var nextScale = this.getScale();
@@ -116,6 +138,9 @@ var PlayerFish = cc.Sprite.extend({
         nextScale = nextScale - .05 > this.MAX_SHRINK ? this.MAX_SHRINK : nextScale - .05;
         
         this.runAction(new cc.EaseBackInOut(new cc.ScaleTo(.2, nextScale)));
+    },
+    flipFish: function () {
+        
     },
     setFlippedX: function (bool) {
         this._super(bool);
