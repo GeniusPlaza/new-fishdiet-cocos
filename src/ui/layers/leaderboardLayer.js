@@ -56,6 +56,7 @@ var LeaderboardLayer = BaseLayer.extend({
         leaderboard.setPosition(
             cc.p(this.size.width * 1.5, this.leaderboardPos.y)
         );
+        leaderboard.setVisible(true);
         leaderboard.runAction(
             new cc.EaseBackOut(
                 new cc.MoveTo(this.animationSpeed, this.leaderboardPos)
@@ -158,7 +159,6 @@ var LeaderboardLayer = BaseLayer.extend({
             
             this.scheduleOnce(f => {
                 reflectionPanel.setVisible(false);
-                leaderboard.setVisible(true);
                 
                 this.animateIntro();
             }, this.animationSpeed)

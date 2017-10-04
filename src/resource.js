@@ -26,7 +26,7 @@ var resImages = {
     ropeSlider: "res/sprites/ui/ropeSlider.png",
     bubble: "res/sprites/bubbles/bubble2.png",
     bubbleWrong: "res/sprites/bubbles/bubble_answer/wrong/BubblePop_00000.png",
-    bubbleRight: "res/sprites/bubbles/bubble_answer/correct/bubbleAnim30001.png",
+    bubbleRight: "res/sprites/bubbles/bubble_answer/correct/bubbleAnim30001.png"
 };
 
 var resJson = {
