@@ -6,7 +6,7 @@ var Question = function (questionData) {
     
     id = questionData.id;
     title = questionData.title;
-    audioInstructions = questionData.audioInstructions;
+    audioInstructions = questionData.sound;
     answers = questionData.answers.map(function (a) {
         return new Answer(a);
     });

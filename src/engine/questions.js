@@ -58,4 +58,10 @@ var Questions = function (data, state) {
         }
         return null;
     };
+    
+    this.getCurrentQuestionAudio = function () {
+        var currentQuestion = data.getQuestions()[state.getCurrentQuestionIndex()];
+        
+        return currentQuestion.getAudioInstructions();
+    };
 }
